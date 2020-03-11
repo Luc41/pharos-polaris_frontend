@@ -3,11 +3,13 @@
     <navbar></navbar>
     <banner></banner>
     <div class="container is_fluid">
-      <div class="columns is-mobile">
+      <div class="columns is-narrow">
         <div class="column">
           <tiles></tiles>
         </div>
-        <div class="column is-one-fifth"></div>
+        <div class="column">
+          <sidebar></sidebar>
+        </div>
       </div>
     </div>
     <foot></foot>
@@ -19,6 +21,7 @@ import navbar from "./components/navbar";
 import banner from "./components/banner";
 import tiles from "./components/tiles";
 import foot from "./components/footer";
+import sidebar from "./components/sidebar";
 
 export default {
   name: "app",
@@ -26,6 +29,7 @@ export default {
     navbar,
     banner,
     tiles,
+    sidebar,
     foot
   }
 };
@@ -36,6 +40,9 @@ export default {
   padding: 20px;
 }
 
+.card {
+  margin-top: 60px;
+}
 
 </style>
 

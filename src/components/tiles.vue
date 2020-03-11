@@ -88,11 +88,11 @@ export default {
 }
 
 .button {
-    position: relative;
-    top: 140px;
+  position: relative;
+  top: 140px;
 }
 #tile_3 .button {
-    position: relative;
-    top: 105px;
+  position: relative;
+  top: 105px;
 }
 </style>
