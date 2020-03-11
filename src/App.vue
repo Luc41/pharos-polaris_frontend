@@ -2,7 +2,14 @@
   <div id="app">
     <navbar></navbar>
     <banner></banner>
-    <tiles ></tiles>
+    <div class="container is_fluid">
+      <div class="columns is-mobile">
+        <div class="column">
+          <tiles></tiles>
+        </div>
+        <div class="column is-one-fifth"></div>
+      </div>
+    </div>
     <foot></foot>
   </div>
 </template>
@@ -14,20 +21,21 @@ import tiles from "./components/tiles";
 import foot from "./components/footer";
 
 export default {
-  name:'app',
+  name: "app",
   components: {
     navbar,
     banner,
     tiles,
     foot
   }
-}
+};
 </script>
 
 <style>
 .tile {
-    margin: 10px;
-    padding: 10px;
+  padding: 20px;
 }
+
+
 </style>
 
