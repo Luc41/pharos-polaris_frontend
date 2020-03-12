@@ -67,32 +67,24 @@ export default {
 
 <style>
 #tile_1 {
-  background-image: url(https://bulma.io/images/placeholders/480x640.png);
+  background-image: url(../assets/bg_1.png);
   background-size: cover;
-  height: 320px;
-  width: 240px;
+  padding-top: 20%;
 }
 
 #tile_2 {
-  background-image: url(https://bulma.io/images/placeholders/480x640.png);
+  background-image: url(../assets/bg_2.jpg);
   background-size: cover;
-  height: 320px;
-  width: 240px;
+  padding-top: 20%;
 }
 
 #tile_3 {
   background-image: url(https://bulma.io/images/placeholders/480x640.png);
   background-size: cover;
-  height: 320px;
-  width: 240px;
+  padding-top: 20%;
 }
 
 .button {
-  position: relative;
-  top: 140px;
-}
-#tile_3 .button {
-  position: relative;
-  top: 105px;
+  margin-top: 110%;
 }
 </style>

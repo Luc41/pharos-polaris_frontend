@@ -1,17 +1,22 @@
 <template>
-  <div id="app">
+  <div class="body" id="app">
     <navbar></navbar>
-    <banner></banner>
-    <div class="container is_fluid">
-      <div class="columns is-narrow">
+
+    <div class="container is-fullhd">
+      <banner></banner>
+    </div>
+
+    <div class="container is_fullhd">
+      <div class="columns">
         <div class="column">
           <tiles></tiles>
         </div>
-        <div class="column">
+        <div class="column is-one-quarter-fullhd is-4">
           <sidebar></sidebar>
         </div>
       </div>
     </div>
+
     <foot></foot>
   </div>
 </template>
@@ -36,13 +41,8 @@ export default {
 </script>
 
 <style>
-.tile {
-  padding: 20px;
+.column {
+  margin-top: 1em;
 }
-
-.card {
-  margin-top: 60px;
-}
-
 </style>
 
