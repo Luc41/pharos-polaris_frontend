@@ -5,43 +5,40 @@
         <div class="tile is-parent">
           <article class="tile is-child box" id="tile_1">
             <p class="title">{{title_1}}</p>
-            <p class="subtitle">{{subtitle_1}}</p>
-            <b-button
-              tag="router-link"
-              to="/"
-              type="is-link"
-              size="is-large"
-              expanded
-              class="button"
-            >GO</b-button>
+            <p class="subtitle is-6">{{subtitle_1}}</p>
+            <figure class="image is-square">
+              <img src="../assets/logo.png" />
+            </figure>
+            <b-button class="button" tag="router-link" to="/" type="is-info" size="is-medium">GO</b-button>
           </article>
         </div>
+
         <div class="tile is-parent">
           <article class="tile is-child box" id="tile_2">
             <p class="title">{{title_2}}</p>
-            <p class="subtitle">{{subtitle_2}}</p>
-            <b-button
-              tag="router-link"
-              to="/"
-              type="is-link"
-              size="is-large"
-              expanded
-              class="button"
-            >GO</b-button>
+            <p class="subtitle is-6">{{subtitle_2}}</p>
+            <figure class="image is-square">
+              <img src="../assets/logo.png" />
+            </figure>
+            <b-button class="button" tag="router-link" to="/" type="is-info" size="is-medium">GO</b-button>
           </article>
         </div>
+
         <div class="tile is-parent">
           <article class="tile is-child box" id="tile_3">
             <p class="title">{{title_3}}</p>
-            <p class="subtitle">{{subtitle_3}}</p>
+            <p class="subtitle is-6">{{subtitle_3}}</p>
+            <figure class="image is-square">
+              <img src="../assets/logo.png" />
+            </figure>
             <b-button
+              class="button"
               tag="router-link"
               to="/"
-              size="is-large"
+              type="is-info"
+              size="is-medium"
               disabled
-              expanded
-              class="button"
-            >Disabled</b-button>
+            >GO</b-button>
           </article>
         </div>
       </div>
@@ -56,7 +53,7 @@ export default {
     return {
       title_1: "FORUM",
       title_2: "WIKI",
-      title_3: "COMING SOON",
+      title_3: "In Dev",
       subtitle_1: "Eorzea Urban Life",
       subtitle_2: "Eorzea Encyclopedia",
       subtitle_3: "Nothing is here yet"
@@ -66,7 +63,7 @@ export default {
 </script>
 
 <style>
-#tile_1 {
+/*#tile_1 {
   background-image: url(../assets/bg_1.png);
   background-size: cover;
   padding-top: 20%;
@@ -82,9 +79,15 @@ export default {
   background-image: url(https://bulma.io/images/placeholders/480x640.png);
   background-size: cover;
   padding-top: 20%;
+}*/
+
+.tile {
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
-.button {
-  margin-top: 110%;
+.tile .button {
+  /*margin-bottom: 8em;*/
+  margin-top: 1em;
 }
 </style>

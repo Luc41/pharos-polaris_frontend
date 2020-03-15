@@ -6,6 +6,7 @@
       <banner></banner>
     </div>
 
+
     <div class="container is_fullhd">
       <div class="columns">
         <div class="column">
@@ -27,6 +28,7 @@ import banner from "./components/banner";
 import tiles from "./components/tiles";
 import foot from "./components/footer";
 import sidebar from "./components/sidebar";
+
 
 export default {
   name: "app",
