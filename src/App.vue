@@ -11,6 +11,7 @@
       <div class="columns">
         <div class="column">
           <tiles></tiles>
+          <subtiles></subtiles>
         </div>
         <div class="column is-one-quarter-fullhd is-4">
           <sidebar></sidebar>
@@ -28,6 +29,7 @@ import banner from "./components/banner";
 import tiles from "./components/tiles";
 import foot from "./components/footer";
 import sidebar from "./components/sidebar";
+import subtiles from "./components/subtiles"
 
 
 export default {
@@ -37,6 +39,7 @@ export default {
     banner,
     tiles,
     sidebar,
+    subtiles,
     foot
   }
 };
@@ -45,6 +48,10 @@ export default {
 <style>
 .column {
   margin-top: 1em;
+}
+
+.body {
+  background-color: #d1d1d1;
 }
 </style>
 

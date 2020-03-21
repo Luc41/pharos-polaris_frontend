@@ -7,7 +7,7 @@
             <p class="title">{{title_1}}</p>
             <p class="subtitle is-6">{{subtitle_1}}</p>
             <figure class="image is-square">
-              <img src="../assets/logo.png" />
+              <img src="../assets/cactus.png" />
             </figure>
             <b-button class="button" tag="router-link" to="/" type="is-info" size="is-medium">GO</b-button>
           </article>
@@ -18,7 +18,7 @@
             <p class="title">{{title_2}}</p>
             <p class="subtitle is-6">{{subtitle_2}}</p>
             <figure class="image is-square">
-              <img src="../assets/logo.png" />
+              <img src="../assets/goblin.png" />
             </figure>
             <b-button class="button" tag="router-link" to="/" type="is-info" size="is-medium">GO</b-button>
           </article>
@@ -29,7 +29,7 @@
             <p class="title">{{title_3}}</p>
             <p class="subtitle is-6">{{subtitle_3}}</p>
             <figure class="image is-square">
-              <img src="../assets/logo.png" />
+              <img src="../assets/morbol.png" />
             </figure>
             <b-button
               class="button"
@@ -63,31 +63,11 @@ export default {
 </script>
 
 <style>
-/*#tile_1 {
-  background-image: url(../assets/bg_1.png);
-  background-size: cover;
-  padding-top: 20%;
-}
-
-#tile_2 {
-  background-image: url(../assets/bg_2.jpg);
-  background-size: cover;
-  padding-top: 20%;
-}
-
-#tile_3 {
-  background-image: url(https://bulma.io/images/placeholders/480x640.png);
-  background-size: cover;
-  padding-top: 20%;
-}*/
-
 .tile {
   margin-top: 1em;
-  margin-bottom: 1em;
 }
 
 .tile .button {
-  /*margin-bottom: 8em;*/
   margin-top: 1em;
 }
 </style>

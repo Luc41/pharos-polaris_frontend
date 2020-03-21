@@ -1,13 +1,13 @@
 <template>
   <div class="card">
     <header class="card-header">
-      <p class="card-header-title is-centered">Developer</p>
+      <p class="card-header-title is-centered">开发者</p>
     </header>
     <div class="card-content">
       <div class="media">
         <div class="media-left">
           <figure class="image is-48x48">
-            <img src="https://bulma.io/images/placeholders/96x96.png" alt="avator" />
+            <img src="https://s.gravatar.com/avatar/2892570d50d254f8e730b8c48480f167" alt="avator" />
           </figure>
         </div>
         <div class="media-content">
@@ -49,7 +49,7 @@ export default {
     return {
       username: "Luc41",
       motto:
-        "人是生而自由的，但却无往不在枷锁之中。自以为是其他一切主人的人，反而比其他一切更是奴隶。"
+        "All those moments will be lost in time,like tears in rain..."
     };
   }
 };
