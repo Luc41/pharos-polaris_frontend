@@ -1,103 +1,105 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated class="glossy">
+  <q-layout view="hHh lpR fFf">
+    <q-header class="bg-transparent text-white" height-hint="98">
       <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          @click="leftDrawerOpen = !leftDrawerOpen"
-          aria-label="Menu"
-          icon="menu"
-        />
-
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
+        <q-avatar>
+          <img src="./assets/logo.png" alt="site logo" />
+        </q-avatar>
+        <q-toolbar-title>Pharos-Polaris</q-toolbar-title>
+        <q-tabs align="right">
+          <q-route-tab to="/page1" label="HOME" />
+          <q-route-tab to="/page2" label="SITES" />
+          <q-route-tab to="/page3" label="ABOUT" />
+          <q-route-tab to="/page4" label="CONTACT US" />
+        </q-tabs>
       </q-toolbar>
     </q-header>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-      content-class="bg-grey-2"
-    >
-      <q-list>
-        <q-item-label header>Essential Links</q-item-label>
-        <q-item clickable tag="a" target="_blank" href="https://quasar.dev">
-          <q-item-section avatar>
-            <q-icon name="school" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Docs</q-item-label>
-            <q-item-label caption>quasar.dev</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://github.com/quasarframework/">
-          <q-item-section avatar>
-            <q-icon name="code" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Github</q-item-label>
-            <q-item-label caption>github.com/quasarframework</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://chat.quasar.dev">
-          <q-item-section avatar>
-            <q-icon name="chat" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Discord Chat Channel</q-item-label>
-            <q-item-label caption>chat.quasar.dev</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://forum.quasar.dev">
-          <q-item-section avatar>
-            <q-icon name="forum" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Forum</q-item-label>
-            <q-item-label caption>forum.quasar.dev</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://twitter.com/quasarframework">
-          <q-item-section avatar>
-            <q-icon name="rss_feed" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Twitter</q-item-label>
-            <q-item-label caption>@quasarframework</q-item-label>
-          </q-item-section>
-        </q-item>
-      </q-list>
-    </q-drawer>
+    <q-footer class="bg-transparent text-white" reveal>
+      <q-toolbar>
+        <q-toolbar-title class="text-caption text-left">
+          Powered by
+          <a href="https://cn.vuejs.org/" target="_blank">Vue.js</a> and
+          <a href="https://quasar.dev/" target="_blank">Quasar</a>
+        </q-toolbar-title>
+        <q-toolbar-title
+          class="text-caption text-right"
+        >&copy;2020 Pharos-Polaris.com All Rights Reserved.</q-toolbar-title>
+      </q-toolbar>
+    </q-footer>
 
     <q-page-container>
-      <HelloWorld />
+      <Slide1 />
+      <Slide2 />
     </q-page-container>
   </q-layout>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Slide1 from "./components/Slide1";
+import Slide2 from "./components/Slide2";
 
 export default {
-  name: 'LayoutDefault',
+  name: "LayoutDefault",
 
   components: {
-    HelloWorld
+    Slide1,
+    Slide2
   },
 
-  data () {
-    return {
-      leftDrawerOpen: false
-    }
+  data() {
+    return {};
   }
-}
+};
+
 </script>
 
 <style>
+body {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(red),
+    to(cyan)
+  );
+  background: linear-gradient(90deg, red, cyan);
+  min-height: 100vh;
+}
+body:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(transparent),
+    to(black)
+  );
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black);
+  mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(transparent),
+    to(black)
+  );
+  mask-image: linear-gradient(to bottom, transparent, black);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(hotpink),
+    to(#639)
+  );
+  background: linear-gradient(90deg, hotpink, #639);
+}
+
+a {
+  text-decoration: none;
+}
 </style>

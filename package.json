@@ -10,7 +10,8 @@
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "core-js": "^3.6.4",
-    "quasar": "^1.0.0",
+    "gsap": "^3.2.6",
+    "quasar": "^1.9.11",
     "vue": "^2.6.11"
   },
   "devDependencies": {
