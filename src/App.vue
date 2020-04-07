@@ -1,9 +1,9 @@
 <template>
-  <q-layout view="hHh lpR fFf">
+  <q-layout view="hHh lpR fFf" id="content">
     <q-header class="bg-transparent text-white" height-hint="98">
       <q-toolbar>
         <q-avatar>
-          <img src="./assets/logo.png" alt="site logo" />
+          <img src="./assets/logo.png" alt="navbar logo" />
         </q-avatar>
         <q-toolbar-title>Pharos-Polaris</q-toolbar-title>
         <q-tabs align="right">
@@ -51,52 +51,47 @@ export default {
     return {};
   }
 };
-
 </script>
 
 <style>
-body {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(red),
-    to(cyan)
-  );
-  background: linear-gradient(90deg, red, cyan);
-  min-height: 100vh;
+html {
+  height: 200%;
 }
-body:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  -webkit-mask-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(transparent),
-    to(black)
-  );
-  -webkit-mask-image: linear-gradient(to bottom, transparent, black);
-  mask-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(transparent),
-    to(black)
-  );
-  mask-image: linear-gradient(to bottom, transparent, black);
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(hotpink),
-    to(#639)
-  );
-  background: linear-gradient(90deg, hotpink, #639);
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #434343;
+  background-image: linear-gradient(#434343, #282828);
+}
+#content {
+  background-color: transparent;
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      rgba(255, 255, 255, 0.05) 25%,
+      rgba(255, 255, 255, 0.05) 26%,
+      transparent 27%,
+      transparent 74%,
+      rgba(255, 255, 255, 0.05) 75%,
+      rgba(255, 255, 255, 0.05) 76%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      rgba(255, 255, 255, 0.05) 25%,
+      rgba(255, 255, 255, 0.05) 26%,
+      transparent 27%,
+      transparent 74%,
+      rgba(255, 255, 255, 0.05) 75%,
+      rgba(255, 255, 255, 0.05) 76%,
+      transparent 77%,
+      transparent
+    );
+  height: 100%;
+  background-size: 50px 50px;
 }
 
 a {
