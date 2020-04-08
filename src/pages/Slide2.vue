@@ -9,27 +9,33 @@
       </div>
 
       <div class="col" style="height: 3em; margin-top: 2em">
-        <div class="panels shadow-10">
-          <div class="panels__container">
-            <a href="https://forum.pharos-polaris.com" target="_blank" class="panel">
-              <div
-                class="panel__content"
-                style="background-image: url(https://i.picsum.photos/id/10/2500/1667.jpg);"
-              >
-                <span class="panel__title text-h2">FORUM</span>
-                <span class="text-h4" style="margin-top: 1em">something in here</span>
+        <div class="row">
+          <div class="col" />
+          <div class="col-8 col-auto">
+            <div class="panels shadow-10">
+              <div class="panels__container">
+                <a href="https://forum.pharos-polaris.com" target="_blank" class="panel">
+                  <div
+                    class="panel__content"
+                    style="background-image: url(https://i.picsum.photos/id/10/2500/1667.jpg);"
+                  >
+                    <span class="panel__title text-h2">FORUM</span>
+                    <span class="text-h4" style="margin-top: 1em">something in here</span>
+                  </div>
+                </a>
+                <a href="https://wiki.pharos-polaris.com" target="_blank" class="panel">
+                  <div
+                    class="panel__content"
+                    style="background-image: url(https://i.picsum.photos/id/1000/5626/3635.jpg)"
+                  >
+                    <span class="panel__title text-h2">WIKI</span>
+                    <span class="text-h4" style="margin-top: 1em">something in here</span>
+                  </div>
+                </a>
               </div>
-            </a>
-            <a href="https://wiki.pharos-polaris.com" target="_blank" class="panel">
-              <div
-                class="panel__content"
-                style="background-image: url(https://i.picsum.photos/id/1000/5626/3635.jpg)"
-              >
-                <span class="panel__title text-h2">WIKI</span>
-                <span class="text-h4" style="margin-top: 1em">something in here</span>
-              </div>
-            </a>
+            </div>
           </div>
+          <div class="col" />
         </div>
       </div>
     </div>

@@ -29,9 +29,9 @@
     </q-footer>
 
     <q-page-container>
-      <keep-alive>
-        <router-view />
-      </keep-alive>
+
+          <router-view />
+
     </q-page-container>
   </q-layout>
 </template>
@@ -59,6 +59,7 @@ export default {
 /*预览：https://fonts.google.com/?preview.text_type=custom*/
 /*@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');*/
 /*@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');*/
+
 
 html {
   overflow: hidden;
