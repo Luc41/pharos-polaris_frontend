@@ -5,12 +5,12 @@
         <q-avatar>
           <img src="./assets/logo.png" alt="navbar logo" />
         </q-avatar>
-        <q-toolbar-title>Pharos-Polaris</q-toolbar-title>
+        <q-toolbar-title style="font-family: 'Josefin Sans', sans-serif;">Pharos-Polaris</q-toolbar-title>
         <q-tabs align="right">
-          <q-route-tab to="/page1" label="HOME" />
-          <q-route-tab to="/page2" label="SITES" />
-          <q-route-tab to="/page3" label="ABOUT" />
-          <q-route-tab to="/page4" label="CONTACT US" />
+          <q-route-tab to="/" label="HOME" />
+          <q-route-tab to="/sites" label="SITES" />
+          <q-route-tab to="/about" label="ABOUT" />
+          <q-route-tab to="/contact" label="CONTACT US" />
         </q-tabs>
       </q-toolbar>
     </q-header>
@@ -29,22 +29,23 @@
     </q-footer>
 
     <q-page-container>
-      <Slide1 />
-      <Slide2 />
+      <keep-alive>
+        <router-view />
+      </keep-alive>
     </q-page-container>
   </q-layout>
 </template>
 
 <script>
-import Slide1 from "./components/Slide1";
-import Slide2 from "./components/Slide2";
+//import Slide1 from "./components/Slide1";
+//import Slide2 from "./components/Slide2";
 
 export default {
   name: "LayoutDefault",
 
   components: {
-    Slide1,
-    Slide2
+    //Slide1,
+    //Slide2
   },
 
   data() {
@@ -54,8 +55,14 @@ export default {
 </script>
 
 <style>
+/*备选字体*/
+/*预览：https://fonts.google.com/?preview.text_type=custom*/
+/*@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');*/
+
 html {
-  height: 200%;
+  overflow: hidden;
+  height: 100%;
 }
 body {
   margin: 0;
@@ -96,5 +103,6 @@ body {
 
 a {
   text-decoration: none;
+  color: #ffc12d;
 }
 </style>
