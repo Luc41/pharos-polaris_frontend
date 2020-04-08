@@ -15,7 +15,7 @@
       </q-toolbar>
     </q-header>
 
-    <q-footer class="bg-transparent text-white" reveal>
+    <q-footer class="bg-transparent text-grey-13" reveal>
       <q-toolbar>
         <q-toolbar-title class="text-caption text-left">
           Powered by
@@ -29,9 +29,9 @@
     </q-footer>
 
     <q-page-container>
-
-          <router-view />
-
+      <keep-alive>
+        <router-view />
+      </keep-alive>
     </q-page-container>
   </q-layout>
 </template>
@@ -59,7 +59,6 @@ export default {
 /*预览：https://fonts.google.com/?preview.text_type=custom*/
 /*@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');*/
 /*@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');*/
-
 
 html {
   overflow: hidden;
