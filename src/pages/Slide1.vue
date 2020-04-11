@@ -8,7 +8,7 @@
         <span class="text-h3 non-selectable">something in here</span>
       </div>
       <div class="col self-center">
-        <img alt="main logo" src="../assets/logo.png" />
+        <img id="logo" alt="main logo" src="../assets/logo.png" />
       </div>
     </div>
   </q-page>
@@ -16,16 +16,17 @@
 
 <script>
 export default {
-  name: "Slide1"
+  name: "Slide1",
+  components: {}
 };
 </script>
 
-<style>
+<style scope>
 span {
   color: aliceblue;
 }
 
-img {
+#logo {
   max-width: 300px;
   max-height: 300px;
   margin-top: 5em;

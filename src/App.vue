@@ -5,7 +5,7 @@
         <q-avatar>
           <img src="./assets/logo.png" alt="navbar logo" />
         </q-avatar>
-        <q-toolbar-title style="font-family: 'Josefin Sans', sans-serif;">Pharos-Polaris</q-toolbar-title>
+        <q-toolbar-title >Pharos-Polaris</q-toolbar-title>
         <q-tabs align="right">
           <q-route-tab to="/" label="home" />
           <q-route-tab to="/sites" label="sites" />
@@ -66,7 +66,7 @@ export default {
 /*background style*/
 html {
   overflow: hidden;
-  height: 100%;
+  height: 110%;
 }
 body {
   margin: 0;

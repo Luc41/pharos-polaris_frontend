@@ -1,10 +1,10 @@
 <template>
   <q-page class="flex-center">
-    <div class="q-pa-md column" style="margin-top: 1em;">
-      <div class="col self-center" style="margin-top: 1em;">
+    <div class="q-pa-md column" style="margin-top: 2em;">
+      <div class="col self-center" style="margin-top: 2em;">
         <span class="text-h1 text-weight-bold non-selectable">CONTACT US</span>
       </div>
-      <div class="col self-center" style="margin-top: 1em;">
+      <div class="col self-center" style="margin-top: 2em;">
         <span class="text-h4 non-selectable">something in here</span>
       </div>
       <div class="col self-center" style="margin-top: 2em;">
@@ -21,12 +21,8 @@
               <div class="col-3 col-auto">
                 <mem />
               </div>
-              <div class="col-3 col-auto">
-                <mem />
-              </div>
-              <div class="col-3 col-auto">
-                <mem />
-              </div>
+              <div class="col-3 col-auto"></div>
+              <div class="col-3 col-auto"></div>
               <div class="col-1 col-auto" />
             </div>
           </q-tab-panel>
@@ -36,9 +32,7 @@
               <div class="col-3 col-auto">
                 <mem />
               </div>
-              <div class="col-3 col-auto">
-                <mem />
-              </div>
+              <div class="col-3 col-auto"></div>
               <div class="col-3 col-auto"></div>
               <div class="col-1 col-auto" />
             </div>

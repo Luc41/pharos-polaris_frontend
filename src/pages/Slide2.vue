@@ -1,14 +1,13 @@
 <template>
   <q-page class="flex-center">
-    <div class="q-pa-md column" style=" margin-top: 1em">
-      <div class="col self-center" style="margin-top: 1em">
+    <div class="q-pa-md column" style="margin-top: 2em;">
+      <div class="col self-center" style="margin-top: 2em;">
         <span class="text-h1 text-weight-bold non-selectable">SITES</span>
       </div>
       <div class="col self-center" style="margin-top: 1em">
         <span class="text-h4 non-selectable">something in here</span>
       </div>
-
-      <div class="col" style="height: 3em; margin-top: 2em">
+      <div class="col" style="margin-top: 2em">
         <div class="row">
           <div class="col" />
           <div class="col-8 col-auto">
@@ -38,6 +37,11 @@
           <div class="col" />
         </div>
       </div>
+      <!--
+      <div class="col self-center" style="margin-top: 15em;">
+        <span class="text-h4 non-selectable">and more</span>
+      </div>
+      -->
     </div>
   </q-page>
 </template>
@@ -54,8 +58,7 @@ export default {
 };
 </script>
 
-<style>
-/* @offsetSize * 2 means the content won't appear to move at all. Set to a lower value for squishing effects. */
+<style scope>
 /*////////////////////////////////////////*/
 /* Layout */
 .panels {
@@ -360,10 +363,6 @@ export default {
   .panel__title {
     font-size: 1.25em;
   }
-}
-html,
-body {
-  height: 100%;
 }
 
 span {

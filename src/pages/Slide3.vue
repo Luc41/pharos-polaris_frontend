@@ -1,7 +1,7 @@
 <template>
   <q-page class="flex-center">
-    <div class="q-pa-md column" style="margin-top: 1em;">
-      <div class="col self-center" style="margin-top: 1em;">
+    <div class="q-pa-md column" style="margin-top: 2em;">
+      <div class="col self-center" style="margin-top: 2em;">
         <span class="text-h1 text-weight-bold non-selectable">ABOUT</span>
       </div>
       <div class="col self-center" style="margin-top: 1em;">
