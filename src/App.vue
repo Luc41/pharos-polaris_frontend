@@ -7,10 +7,10 @@
         </q-avatar>
         <q-toolbar-title style="font-family: 'Josefin Sans', sans-serif;">Pharos-Polaris</q-toolbar-title>
         <q-tabs align="right">
-          <q-route-tab to="/" label="HOME" />
-          <q-route-tab to="/sites" label="SITES" />
-          <q-route-tab to="/about" label="ABOUT" />
-          <q-route-tab to="/contact" label="CONTACT US" />
+          <q-route-tab to="/" label="home" />
+          <q-route-tab to="/sites" label="sites" />
+          <q-route-tab to="/about" label="about" />
+          <q-route-tab to="/contact" label="contact us" />
         </q-tabs>
       </q-toolbar>
     </q-header>
@@ -29,9 +29,11 @@
     </q-footer>
 
     <q-page-container>
-      <keep-alive>
-        <router-view />
-      </keep-alive>
+      <transition name="slide" mode="out-in" appear>
+        <keep-alive>
+          <router-view />
+        </keep-alive>
+      </transition>
     </q-page-container>
   </q-layout>
 </template>
@@ -60,6 +62,8 @@ export default {
 /*@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');*/
 /*@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');*/
 
+
+/*background style*/
 html {
   overflow: hidden;
   height: 100%;
@@ -101,8 +105,28 @@ body {
   background-size: 50px 50px;
 }
 
+
+/*link style*/
 a {
   text-decoration: none;
   color: #ffc12d;
+}
+
+/* page transition */
+.slide-enter-active {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.slide-leave-active {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.slide-enter,
+.slide-leave-to {
+  -webkit-transform: translateY(2rem);
+  transform: translateY(2rem);
+  opacity: 0;
 }
 </style>

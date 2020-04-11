@@ -7,9 +7,7 @@
       <div class="col self-center" style="margin-top: 1em;">
         <span class="text-h4 non-selectable">something in here</span>
       </div>
-      <div class="col">
-
-      </div>
+      <div class="col"></div>
     </div>
   </q-page>
 </template>
