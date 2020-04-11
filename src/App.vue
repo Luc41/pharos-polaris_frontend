@@ -5,7 +5,7 @@
         <q-avatar>
           <img src="./assets/logo.png" alt="navbar logo" />
         </q-avatar>
-        <q-toolbar-title style="font-family: 'Josefin Sans', sans-serif;">Pharos-Polaris</q-toolbar-title>
+        <q-toolbar-title>Pharos-Polaris</q-toolbar-title>
         <q-tabs align="right">
           <q-route-tab to="/" label="home" />
           <q-route-tab to="/sites" label="sites" />
@@ -30,9 +30,7 @@
 
     <q-page-container>
       <transition name="slide" mode="out-in" appear>
-        <keep-alive>
-          <router-view />
-        </keep-alive>
+        <router-view />
       </transition>
     </q-page-container>
   </q-layout>
@@ -62,11 +60,10 @@ export default {
 /*@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');*/
 /*@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');*/
 
-
 /*background style*/
 html {
   overflow: hidden;
-  height: 100%;
+  height: 110%;
 }
 body {
   margin: 0;
@@ -104,7 +101,6 @@ body {
   height: 100%;
   background-size: 50px 50px;
 }
-
 
 /*link style*/
 a {

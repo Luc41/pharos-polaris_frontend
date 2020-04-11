@@ -1,24 +1,22 @@
 <template>
-  <q-card class="mem-card bg-amber-1 shadow-10">
-    <div class="row items-center justify-between q-pa-md">
+  <q-card class="mem-card" style="background-color: #e0e0e0;">
+    <div class="q-pa-md row items-center">
       <div class="col col-auto">
         <q-item-section avatar="true">
-          <q-avatar
-            color="primary"
-            size="52px"
-            font-size="52px"
-            text-color="white"
-            icon="account_circle"
-          />
+          <q-avatar color="indigo-6" size="52px" font-size="52px" text-color="white">
+            <img :src="'https://s.gravatar.com/avatar/' + imageHash" alt="avatar" />
+          </q-avatar>
         </q-item-section>
       </div>
-      <div class="col col-auto">
+      <div class="col">
         <span class="text-h6 text-black">{{name}}</span>
+        <q-splitter />
+        <span class="text-caption text-grey-14">{{date}}</span>
       </div>
       <div class="col col-auto">
         <q-card-actions>
-          <a :href="mailaddress">
-            <q-btn flat round size="20px" color="grey-8" icon="mail" />
+          <a :href="'mailto:' + mailaddress">
+            <q-btn flat round size="20px" icon="mail" style="color: #9e9e9e;" />
           </a>
         </q-card-actions>
       </div>
@@ -28,11 +26,13 @@
 
 <script>
 export default {
-  name: "men",
+  name: "memcard",
   data() {
     return {
       name: "Luc41",
-      mailaddress: "mailto:whthunder@live.cn"
+      date: "Since March 16,2020",
+      mailaddress: "whthunder@live.cn",
+      imageHash: "a969511fe630077db18e2151af18f980"
     };
   }
 };
@@ -40,7 +40,7 @@ export default {
 
 <style lang="sass" scoped>
 .mem-card
-    max-width: 100%
-    max-height: 100%
-    margin-top: 1em
+  max-width: 100%
+  max-height: 100%
+  margin-top: 1em
 </style>

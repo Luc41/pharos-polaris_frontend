@@ -1,43 +1,53 @@
 <template>
   <q-page class="flex-center">
-    <div class="q-pa-md column" style=" margin-top: 1em">
-      <div class="col self-center" style="margin-top: 1em">
-        <span class="text-h1 text-weight-bold non-selectable">SITES</span>
-      </div>
-      <div class="col self-center" style="margin-top: 1em">
-        <span class="text-h4 non-selectable">something in here</span>
-      </div>
-
-      <div class="col" style="height: 3em; margin-top: 2em">
-        <div class="row">
-          <div class="col" />
-          <div class="col-8 col-auto">
-            <div class="panels shadow-10">
-              <div class="panels__container">
-                <a href="https://forum.pharos-polaris.com" target="_blank" class="panel">
-                  <div
-                    class="panel__content"
-                    style="background-image: url(https://i.picsum.photos/id/10/2500/1667.jpg);"
-                  >
-                    <span class="panel__title text-h2">FORUM</span>
-                    <span class="text-h4" style="margin-top: 1em">something in here</span>
-                  </div>
-                </a>
-                <a href="https://wiki.pharos-polaris.com" target="_blank" class="panel">
-                  <div
-                    class="panel__content"
-                    style="background-image: url(https://i.picsum.photos/id/1000/5626/3635.jpg)"
-                  >
-                    <span class="panel__title text-h2">WIKI</span>
-                    <span class="text-h4" style="margin-top: 1em">something in here</span>
-                  </div>
-                </a>
+    <div class="q-pa-md column" style="margin-top: 2em;">
+      <transition name="slide" mode="out-in" appear>
+        <div class="col self-center" style="margin-top: 2em;">
+          <span class="text-h1 text-weight-bold non-selectable">SITES</span>
+        </div>
+      </transition>
+      <transition name="slide" mode="out-in" appear>
+        <div class="col self-center" style="margin-top: 1em; transition-delay:.2s;">
+          <span class="text-h4 non-selectable">something in here</span>
+        </div>
+      </transition>
+      <transition name="slide" mode="out-in" appear>
+        <div class="col" style="margin-top: 2em; transition-delay:.4s;">
+          <div class="row">
+            <div class="col" />
+            <div class="col-8 col-auto">
+              <div class="panels shadow-10">
+                <div class="panels__container">
+                  <a href="https://forum.pharos-polaris.com" target="_blank" class="panel">
+                    <div
+                      class="panel__content"
+                      style="background-image: url(https://i.picsum.photos/id/10/2500/1667.jpg);"
+                    >
+                      <span class="panel__title text-h2">FORUM</span>
+                      <span class="text-h4" style="margin-top: 1em">something in here</span>
+                    </div>
+                  </a>
+                  <a href="https://wiki.pharos-polaris.com" target="_blank" class="panel">
+                    <div
+                      class="panel__content"
+                      style="background-image: url(https://i.picsum.photos/id/1000/5626/3635.jpg)"
+                    >
+                      <span class="panel__title text-h2">WIKI</span>
+                      <span class="text-h4" style="margin-top: 1em">something in here</span>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
+            <div class="col" />
           </div>
-          <div class="col" />
         </div>
+      </transition>
+      <!--
+      <div class="col self-center" style="margin-top: 15em;">
+        <span class="text-h4 non-selectable">and more</span>
       </div>
+      -->
     </div>
   </q-page>
 </template>
@@ -54,8 +64,7 @@ export default {
 };
 </script>
 
-<style>
-/* @offsetSize * 2 means the content won't appear to move at all. Set to a lower value for squishing effects. */
+<style scope>
 /*////////////////////////////////////////*/
 /* Layout */
 .panels {
@@ -361,12 +370,25 @@ export default {
     font-size: 1.25em;
   }
 }
-html,
-body {
-  height: 100%;
-}
 
 span {
   color: aliceblue;
+}
+
+.slide-enter-active {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.slide-leave-active {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.slide-enter,
+.slide-leave-to {
+  -webkit-transform: translateY(2rem);
+  transform: translateY(2rem);
+  opacity: 0;
 }
 </style>
