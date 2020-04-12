@@ -2,7 +2,7 @@
   <q-card class="mem-card" style="background-color: #e0e0e0;">
     <div class="q-pa-md row items-center">
       <div class="col col-auto">
-        <q-item-section avatar="true">
+        <q-item-section avatar>
           <q-avatar color="indigo-6" size="52px" font-size="52px" text-color="white">
             <img :src="'https://s.gravatar.com/avatar/' + imageHash" alt="avatar" />
           </q-avatar>
@@ -10,7 +10,7 @@
       </div>
       <div class="col">
         <span class="text-h6 text-black">{{name}}</span>
-        <q-splitter />
+        <q-space />
         <span class="text-caption text-grey-14">{{date}}</span>
       </div>
       <div class="col col-auto">

@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex-center">
-    <div class="q-pa-md column" style="margin-top: 2em;">
+    <div class="q-pa-md column">
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="margin-top: 2em;">
           <span class="text-h1 text-weight-bold non-selectable">CONTACT US</span>
@@ -20,44 +20,46 @@
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
-        <div class="col" style="margin-top: 3em; transition-delay:.6s;">
-          <q-tab-panels v-model="tab" class="bg-transparent" animated>
-            <q-tab-panel name="dev">
-              <div class="row q-gutter-md">
-                <div class="col-1 col-auto" />
-                <div class="col-3 col-auto">
-                  <mem />
+        <keep-alive>
+          <div class="col" style="margin-top: 3em; transition-delay:.6s;">
+            <q-tab-panels v-model="tab" class="bg-transparent" animated>
+              <q-tab-panel name="dev">
+                <div class="row q-gutter-md">
+                  <div class="col-1 col-auto" />
+                  <div class="col-3 col-auto">
+                    <memcard />
+                  </div>
+                  <div class="col-3 col-auto"></div>
+                  <div class="col-3 col-auto"></div>
+                  <div class="col-1 col-auto" />
                 </div>
-                <div class="col-3 col-auto"></div>
-                <div class="col-3 col-auto"></div>
-                <div class="col-1 col-auto" />
-              </div>
-            </q-tab-panel>
-            <q-tab-panel name="contri">
-              <div class="row q-gutter-md">
-                <div class="col-1 col-auto" />
-                <div class="col-3 col-auto">
-                  <mem />
+              </q-tab-panel>
+              <q-tab-panel name="contri">
+                <div class="row q-gutter-md">
+                  <div class="col-1 col-auto" />
+                  <div class="col-3 col-auto">
+                    <memcard />
+                  </div>
+                  <div class="col-3 col-auto"></div>
+                  <div class="col-3 col-auto"></div>
+                  <div class="col-1 col-auto" />
                 </div>
-                <div class="col-3 col-auto"></div>
-                <div class="col-3 col-auto"></div>
-                <div class="col-1 col-auto" />
-              </div>
-            </q-tab-panel>
-          </q-tab-panels>
-        </div>
+              </q-tab-panel>
+            </q-tab-panels>
+          </div>
+        </keep-alive>
       </transition>
     </div>
   </q-page>
 </template>
 
 <script>
-import mem from "../components/MemberCard";
+import memcard from "../components/MemberCard";
 
 export default {
   name: "Slide4",
   components: {
-    mem
+    memcard
   },
   data() {
     return {
