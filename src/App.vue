@@ -3,7 +3,7 @@
     <q-header class="bg-transparent text-white" height-hint="98">
       <q-toolbar>
         <q-avatar>
-          <img src="./assets/logo.png" alt="navbar logo" />
+          <img src="./assets/logo-white.png" alt="navbar logo" />
         </q-avatar>
         <q-toolbar-title>Pharos-Polaris</q-toolbar-title>
         <q-tabs align="right">

@@ -12,7 +12,6 @@
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
-        <keep-alive>
           <div class="col" style="margin-top: 2em; transition-delay:.4s;">
             <div class="row">
               <div class="col" />
@@ -43,7 +42,6 @@
               <div class="col" />
             </div>
           </div>
-        </keep-alive>
       </transition>
       <!--
       <div class="col self-center" style="margin-top: 15em;">
