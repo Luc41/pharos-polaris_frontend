@@ -37,12 +37,10 @@
 </template>
 
 <script>
-
 export default {
   name: "LayoutDefault",
 
-  components: {
-  },
+  components: {},
 
   data() {
     return {};
