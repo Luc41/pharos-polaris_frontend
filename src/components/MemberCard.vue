@@ -4,18 +4,18 @@
       <div class="col col-auto">
         <q-item-section avatar>
           <q-avatar color="indigo-6" size="52px" font-size="52px" text-color="white">
-            <img :src="'https://s.gravatar.com/avatar/' + imageHash" alt="avatar" />
+            <img :src="'https://s.gravatar.com/avatar/' + info.imageHash" alt="avatar" />
           </q-avatar>
         </q-item-section>
       </div>
       <div class="col">
-        <span class="text-h6 text-black">{{name}}</span>
+        <span class="text-h6 text-black">{{info.name}}</span>
         <q-space />
-        <span class="text-caption text-grey-14">{{date}}</span>
+        <span class="text-caption text-grey-14">Since {{info.date}}</span>
       </div>
       <div class="col col-auto">
         <q-card-actions>
-          <a :href="'mailto:' + mailaddress">
+          <a :href="'mailto:' + info.mailaddress">
             <q-btn flat round size="20px" icon="mail" style="color: #9e9e9e;" />
           </a>
         </q-card-actions>
@@ -27,12 +27,9 @@
 <script>
 export default {
   name: "memcard",
+  props:["info"],
   data() {
     return {
-      name: "Luc41",
-      date: "Since March 16,2020",
-      mailaddress: "whthunder@live.cn",
-      imageHash: "a969511fe630077db18e2151af18f980"
     };
   }
 };
