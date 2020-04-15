@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex-center">
-    <div class="q-pa-md column" style="margin-top: 2em;">
+    <div class="q-pa-md column">
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="margin-top: 2em;">
           <span class="text-h1 text-weight-bold non-selectable">CONTACT US</span>
@@ -26,7 +26,7 @@
               <div class="row q-gutter-md">
                 <div class="col-1 col-auto" />
                 <div class="col-3 col-auto">
-                  <mem />
+                  <memcard />
                 </div>
                 <div class="col-3 col-auto"></div>
                 <div class="col-3 col-auto"></div>
@@ -37,7 +37,7 @@
               <div class="row q-gutter-md">
                 <div class="col-1 col-auto" />
                 <div class="col-3 col-auto">
-                  <mem />
+                  <memcard />
                 </div>
                 <div class="col-3 col-auto"></div>
                 <div class="col-3 col-auto"></div>
@@ -52,12 +52,12 @@
 </template>
 
 <script>
-import mem from "../components/MemberCard";
+import memcard from "../components/MemberCard";
 
 export default {
   name: "Slide4",
   components: {
-    mem
+    memcard
   },
   data() {
     return {

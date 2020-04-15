@@ -1,9 +1,9 @@
 <template>
-  <q-layout view="hHh lpR fFf" id="content">
-    <q-header class="bg-transparent text-white" height-hint="98">
+  <q-layout view="hHh lpR fFf">
+    <q-header class="bg-transparent text-white">
       <q-toolbar>
         <q-avatar>
-          <img src="./assets/logo.png" alt="navbar logo" />
+          <img src="./assets/logo-white.png" alt="navbar logo" />
         </q-avatar>
         <q-toolbar-title>Pharos-Polaris</q-toolbar-title>
         <q-tabs align="right">
@@ -28,7 +28,7 @@
       </q-toolbar>
     </q-footer>
 
-    <q-page-container>
+    <q-page-container id="content">
       <transition name="slide" mode="out-in" appear>
         <router-view />
       </transition>
@@ -37,16 +37,10 @@
 </template>
 
 <script>
-//import Slide1 from "./components/Slide1";
-//import Slide2 from "./components/Slide2";
-
 export default {
   name: "LayoutDefault",
 
-  components: {
-    //Slide1,
-    //Slide2
-  },
+  components: {},
 
   data() {
     return {};
@@ -62,8 +56,7 @@ export default {
 
 /*background style*/
 html {
-  overflow: hidden;
-  height: 110%;
+  height: 100%;
 }
 body {
   margin: 0;
