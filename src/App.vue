@@ -1,6 +1,6 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header class="bg-transparent text-white" height-hint="98">
+    <q-header class="bg-transparent text-white">
       <q-toolbar>
         <q-avatar>
           <img src="./assets/logo-white.png" alt="navbar logo" />
