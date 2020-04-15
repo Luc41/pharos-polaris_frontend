@@ -20,34 +20,32 @@
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
-        <keep-alive>
-          <div class="col" style="margin-top: 3em; transition-delay:.6s;">
-            <q-tab-panels v-model="tab" class="bg-transparent" animated>
-              <q-tab-panel name="dev">
-                <div class="row q-gutter-md">
-                  <div class="col-1 col-auto" />
-                  <div class="col-3 col-auto">
-                    <memcard />
-                  </div>
-                  <div class="col-3 col-auto"></div>
-                  <div class="col-3 col-auto"></div>
-                  <div class="col-1 col-auto" />
+        <div class="col" style="margin-top: 3em; transition-delay:.6s;">
+          <q-tab-panels v-model="tab" class="bg-transparent" animated>
+            <q-tab-panel name="dev">
+              <div class="row q-gutter-md">
+                <div class="col-1 col-auto" />
+                <div class="col-3 col-auto">
+                  <memcard />
                 </div>
-              </q-tab-panel>
-              <q-tab-panel name="contri">
-                <div class="row q-gutter-md">
-                  <div class="col-1 col-auto" />
-                  <div class="col-3 col-auto">
-                    <memcard />
-                  </div>
-                  <div class="col-3 col-auto"></div>
-                  <div class="col-3 col-auto"></div>
-                  <div class="col-1 col-auto" />
+                <div class="col-3 col-auto"></div>
+                <div class="col-3 col-auto"></div>
+                <div class="col-1 col-auto" />
+              </div>
+            </q-tab-panel>
+            <q-tab-panel name="contri">
+              <div class="row q-gutter-md">
+                <div class="col-1 col-auto" />
+                <div class="col-3 col-auto">
+                  <memcard />
                 </div>
-              </q-tab-panel>
-            </q-tab-panels>
-          </div>
-        </keep-alive>
+                <div class="col-3 col-auto"></div>
+                <div class="col-3 col-auto"></div>
+                <div class="col-1 col-auto" />
+              </div>
+            </q-tab-panel>
+          </q-tab-panels>
+        </div>
       </transition>
     </div>
   </q-page>
