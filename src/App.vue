@@ -29,9 +29,9 @@
     </q-footer>
 
     <q-page-container id="content">
-      <transition name="slide" mode="out-in" appear>
+
         <router-view />
-      </transition>
+
       <q-page-sticky position="bottom-right" :offset="fabPos">
         <q-fab
           color="blue"
