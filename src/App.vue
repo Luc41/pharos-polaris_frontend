@@ -29,9 +29,7 @@
     </q-footer>
 
     <q-page-container id="content">
-
-        <router-view />
-
+      <router-view />
       <q-page-sticky position="bottom-right" :offset="fabPos">
         <q-fab
           color="blue"
@@ -157,23 +155,5 @@ body {
 a {
   text-decoration: none;
   color: #ffc12d;
-}
-
-/* page transition */
-.slide-enter-active {
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-}
-
-.slide-leave-active {
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.slide-enter,
-.slide-leave-to {
-  -webkit-transform: translateY(2rem);
-  transform: translateY(2rem);
-  opacity: 0;
 }
 </style>
