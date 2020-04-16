@@ -32,6 +32,7 @@
       <router-view />
       <q-page-sticky position="bottom-right" :offset="fabPos">
         <q-fab
+          v-model="fabMain"
           color="blue"
           icon="keyboard_arrow_up"
           direction="up"
@@ -90,6 +91,7 @@ export default {
 
   data() {
     return {
+      fabMain: true,
       fabPos: [50, 100],
       draggingFab: false
     };
