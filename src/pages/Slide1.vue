@@ -22,11 +22,6 @@
           <img id="logo" alt="main logo" src="../assets/logo-white.png" />
         </div>
       </transition>
-      <transition name="slide" mode="out-in" appear>
-        <div class="col self-center" style="transition-delay:.8s;">
-          <q-btn icon="keyboard_arrow_down" size="20px" color="white" flat round to="/sites" />
-        </div>
-      </transition>
     </div>
   </q-page>
 </template>
@@ -36,10 +31,8 @@ export default {
   name: "Slide1",
   components: {},
   data() {
-    return {
-    };
-  },
-  
+    return {};
+  }
 };
 </script>
 

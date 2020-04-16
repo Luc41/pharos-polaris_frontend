@@ -47,7 +47,7 @@
             color="warning"
             icon="contact_support"
             label="CONTACT US"
-            to="contact"
+            to="/contact"
             flat
             :disable="draggingFab"
           />
@@ -56,7 +56,7 @@
             color="info"
             icon="info"
             label="ABOUT"
-            to="about"
+            to="/about"
             flat
             :disable="draggingFab"
           />

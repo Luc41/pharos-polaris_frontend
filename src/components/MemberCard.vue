@@ -27,10 +27,9 @@
 <script>
 export default {
   name: "memcard",
-  props:["info"],
+  props: ["info"],
   data() {
-    return {
-    };
+    return {};
   }
 };
 </script>
