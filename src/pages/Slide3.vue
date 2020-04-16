@@ -12,12 +12,22 @@
         </div>
       </transition>
     </div>
+    <q-page-sticky position="bottom" :offset="fabPos_3">
+        <div class="col self-center" style="transition-delay:.6s;">
+          <q-btn icon="keyboard_arrow_down" size="20px" color="white" flat round to="/contact" />
+        </div>
+    </q-page-sticky>
   </q-page>
 </template>
 
 <script>
 export default {
-  name: "Slide3"
+  name: "Slide3",
+  data() {
+    return {
+      fabPos_3: [0,30]
+    }
+  }
 };
 </script>
 

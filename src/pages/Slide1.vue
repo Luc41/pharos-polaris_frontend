@@ -23,6 +23,13 @@
         </div>
       </transition>
     </div>
+    <q-page-sticky position="bottom" :offset="fabPos_1">
+      <transition name="slide" mode="out-in" appear>
+        <div class="col self-center" style="transition-delay:.6s;">
+          <q-btn icon="keyboard_arrow_down" size="20px" color="white" flat round to="/sites" />
+        </div>
+      </transition>
+    </q-page-sticky>
   </q-page>
 </template>
 
@@ -31,7 +38,9 @@ export default {
   name: "Slide1",
   components: {},
   data() {
-    return {};
+    return {
+      fabPos_1: [0,30]
+    };
   }
 };
 </script>
