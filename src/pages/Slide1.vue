@@ -28,54 +28,6 @@
         </div>
       </transition>
     </div>
-    <q-page-sticky position="bottom-right" :offset="fabPos">
-      <q-fab
-        color="blue"
-        icon="keyboard_arrow_up"
-        direction="up"
-        vertical-actions-align="right"
-        flat
-        :disable="draggingFab"
-        v-touch-pan.prevent.mouse="moveFab"
-      >
-        <q-fab-action
-          label-position="left"
-          color="warning"
-          icon="contact_support"
-          label="CONTACT US"
-          to="contact"
-          flat
-          :disable="draggingFab"
-        />
-        <q-fab-action
-          label-position="left"
-          color="info"
-          icon="info"
-          label="ABOUT"
-          to="about"
-          flat
-          :disable="draggingFab"
-        />
-        <q-fab-action
-          label-position="left"
-          color="secondary"
-          icon="web"
-          label="SITES"
-          to="/sites"
-          flat
-          :disable="draggingFab"
-        />
-        <q-fab-action
-          label-position="left"
-          color="primary"
-          icon="home"
-          label="HOME"
-          to="/"
-          flat
-          :disable="draggingFab"
-        />
-      </q-fab>
-    </q-page-sticky>
   </q-page>
 </template>
 
@@ -85,17 +37,9 @@ export default {
   components: {},
   data() {
     return {
-      fabPos: [50, 100],
-      draggingFab: false
     };
   },
-  methods: {
-    moveFab(ev) {
-      this.draggingFab = ev.isFirst !== true && ev.isFinal !== true;
-
-      this.fabPos = [this.fabPos[0] - ev.delta.x, this.fabPos[1] - ev.delta.y];
-    }
-  }
+  
 };
 </script>
 
