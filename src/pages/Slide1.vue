@@ -2,23 +2,17 @@
   <q-page class="flex flex-center">
     <div class="column">
       <transition name="slide" mode="out-in" appear>
-        <div class="col self-center" style="margin-top: 2em; margin-bottom: 2em;">
+        <div class="col self-center">
           <span class="text-h1 text-weight-bold non-selectable">Pharos-Polaris.com</span>
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
-        <div
-          class="col self-center"
-          style="transition-delay:.2s; margin-top: 1em; margin-bottom: 1em;"
-        >
+        <div class="col self-center" style="transition-delay:.2s;">
           <span class="text-h3 non-selectable">something in here</span>
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
-        <div
-          class="col self-center"
-          style="transition-delay:.4s; margin-top: 2em; margin-bottom: 2em;"
-        >
+        <div class="col self-center" style="transition-delay:.4s;">
           <img id="logo" alt="main logo" src="../assets/logo-white.png" />
         </div>
       </transition>
@@ -39,7 +33,7 @@ export default {
   components: {},
   data() {
     return {
-      fabPos_1: [0,30]
+      fabPos_1: [0, 30]
     };
   }
 };

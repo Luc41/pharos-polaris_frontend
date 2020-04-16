@@ -52,7 +52,7 @@
     <q-page-sticky position="bottom" :offset="fabPos_2">
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="transition-delay:.6s;">
-          <q-btn icon="keyboard_arrow_down" size="20px" color="white" flat round to="/abouts" />
+          <q-btn icon="keyboard_arrow_down" size="20px" color="white" flat round to="/about" />
         </div>
       </transition>
     </q-page-sticky>
