@@ -2,28 +2,100 @@
   <q-page class="flex flex-center">
     <div class="column">
       <transition name="slide" mode="out-in" appear>
-        <div class="col self-center">
+        <div class="col self-center" style="margin-top: 2em; margin-bottom: 2em;">
           <span class="text-h1 text-weight-bold non-selectable">Pharos-Polaris.com</span>
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
-        <div class="col self-center" style="transition-delay:.2s;">
+        <div
+          class="col self-center"
+          style="transition-delay:.2s; margin-top: 1em; margin-bottom: 1em;"
+        >
           <span class="text-h3 non-selectable">something in here</span>
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
-        <div class="col self-center" style="transition-delay:.4s;">
+        <div
+          class="col self-center"
+          style="transition-delay:.4s; margin-top: 2em; margin-bottom: 2em;"
+        >
           <img id="logo" alt="main logo" src="../assets/logo-white.png" />
         </div>
       </transition>
+      <transition name="slide" mode="out-in" appear>
+        <div class="col self-center" style="transition-delay:.8s;">
+          <q-btn icon="keyboard_arrow_down" size="20px" color="white" flat round to="/sites" />
+        </div>
+      </transition>
     </div>
+    <q-page-sticky position="bottom-right" :offset="fabPos">
+      <q-fab
+        color="blue"
+        icon="keyboard_arrow_up"
+        direction="up"
+        vertical-actions-align="right"
+        flat
+        :disable="draggingFab"
+        v-touch-pan.prevent.mouse="moveFab"
+      >
+        <q-fab-action
+          label-position="left"
+          color="warning"
+          icon="contact_support"
+          label="CONTACT US"
+          to="contact"
+          flat
+          :disable="draggingFab"
+        />
+        <q-fab-action
+          label-position="left"
+          color="info"
+          icon="info"
+          label="ABOUT"
+          to="about"
+          flat
+          :disable="draggingFab"
+        />
+        <q-fab-action
+          label-position="left"
+          color="secondary"
+          icon="web"
+          label="SITES"
+          to="/sites"
+          flat
+          :disable="draggingFab"
+        />
+        <q-fab-action
+          label-position="left"
+          color="primary"
+          icon="home"
+          label="HOME"
+          to="/"
+          flat
+          :disable="draggingFab"
+        />
+      </q-fab>
+    </q-page-sticky>
   </q-page>
 </template>
 
 <script>
 export default {
   name: "Slide1",
-  components: {}
+  components: {},
+  data() {
+    return {
+      fabPos: [50, 100],
+      draggingFab: false
+    };
+  },
+  methods: {
+    moveFab(ev) {
+      this.draggingFab = ev.isFirst !== true && ev.isFinal !== true;
+
+      this.fabPos = [this.fabPos[0] - ev.delta.x, this.fabPos[1] - ev.delta.y];
+    }
+  }
 };
 </script>
 
@@ -35,7 +107,6 @@ span {
 #logo {
   max-width: 300px;
   max-height: 300px;
-  margin-top: 5em;
 }
 
 .slide-enter-active {

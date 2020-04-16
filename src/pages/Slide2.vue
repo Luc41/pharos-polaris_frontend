@@ -2,6 +2,11 @@
   <q-page class="flex-center">
     <div class="q-pa-md column">
       <transition name="slide" mode="out-in" appear>
+        <div class="col self-center" style="transition-delay:.6s;">
+          <q-btn icon="keyboard_arrow_up" size="20px" color="white" flat round to="/" />
+        </div>
+      </transition>
+      <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="margin-top: 2em;">
           <span class="text-h1 text-weight-bold non-selectable">SITES</span>
         </div>
@@ -12,10 +17,10 @@
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
-        <div class="col" style="margin-top: 2em; transition-delay:.4s;">
+        <div class="col" style="margin-top: 2em; transition-delay:.4s; margin-bottom: 18em;">
           <div class="row">
             <div class="col" />
-            <div class="col-8 col-auto">
+            <div class="col-8">
               <div class="panels shadow-10">
                 <div class="panels__container">
                   <a href="https://forum.pharos-polaris.com" target="_blank" class="panel">
@@ -48,6 +53,11 @@
         <span class="text-h4 non-selectable">and more</span>
       </div>
       -->
+      <transition name="slide" mode="out-in" appear>
+        <div class="col self-center" style="transition-delay:.6s;">
+          <q-btn icon="keyboard_arrow_down" size="20px" color="white" flat round to="/about" />
+        </div>
+      </transition>
     </div>
   </q-page>
 </template>

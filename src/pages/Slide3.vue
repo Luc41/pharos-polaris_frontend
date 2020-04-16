@@ -2,6 +2,11 @@
   <q-page class="flex-center">
     <div class="q-pa-md column">
       <transition name="slide" mode="out-in" appear>
+        <div class="col self-center" style="transition-delay:.6s;">
+          <q-btn icon="keyboard_arrow_up" size="20px" color="white" flat round to="/sites" />
+        </div>
+      </transition>
+      <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="margin-top: 2em;">
           <span class="text-h1 text-weight-bold non-selectable">ABOUT</span>
         </div>
@@ -11,7 +16,11 @@
           <span class="text-h4 non-selectable">something in here</span>
         </div>
       </transition>
-      <div class="col"></div>
+      <transition name="slide" mode="out-in" appear>
+        <div class="col self-center" style="transition-delay:.6s;">
+          <q-btn icon="keyboard_arrow_down" size="20px" color="white" flat round to="/contact" />
+        </div>
+      </transition>
     </div>
   </q-page>
 </template>
