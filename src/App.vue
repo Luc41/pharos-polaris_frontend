@@ -32,6 +32,7 @@
       <router-view />
       <q-page-sticky position="bottom-right" :offset="fabPos">
         <q-fab
+          class="shadow-5"
           v-model="fabMain"
           color="blue"
           icon="keyboard_arrow_up"
@@ -42,6 +43,7 @@
           v-touch-pan.prevent.mouse="moveFab"
         >
           <q-fab-action
+            class="shadow-5"
             label-position="left"
             color="warning"
             icon="contact_support"
@@ -51,6 +53,7 @@
             :disable="draggingFab"
           />
           <q-fab-action
+            class="shadow-5"
             label-position="left"
             color="info"
             icon="info"
@@ -60,6 +63,7 @@
             :disable="draggingFab"
           />
           <q-fab-action
+            class="shadow-5"
             label-position="left"
             color="secondary"
             icon="web"
@@ -69,6 +73,7 @@
             :disable="draggingFab"
           />
           <q-fab-action
+            class="shadow-5"
             label-position="left"
             color="primary"
             icon="home"
