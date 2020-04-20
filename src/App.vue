@@ -29,7 +29,9 @@
     </q-footer>
 
     <q-page-container id="content">
-      <router-view />
+      <transition name="Rfade" mode="out-in" appear>
+        <router-view />
+      </transition>
       <q-page-sticky position="bottom-right" :offset="fabPos">
         <q-fab
           class="shadow-5"
@@ -162,5 +164,44 @@ body {
 a {
   text-decoration: none;
   color: #ffc12d;
+}
+
+.slide-enter-active {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.slide-leave-active {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.slide-enter,
+.slide-leave-to {
+  -webkit-transform: translateY(2rem);
+  transform: translateY(2rem);
+  opacity: 0;
+}
+
+.Rfade-enter-active,
+.Rfade-leave-active {
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+.Rfade-enter,
+.Rfade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  -webkit-transition: opacity 1.5s ease;
+  transition: opacity 1.5s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

@@ -1,8 +1,15 @@
 <template>
   <q-page class="flex-center">
+    <q-page-sticky position="top" :offset="up_fabPos_1">
+      <transition name="fade" mode="out-in" appear>
+        <div class="col self-center" style="transition-delay:.6s;">
+          <q-btn icon="keyboard_arrow_up" size="20px" color="white" flat round to="/" />
+        </div>
+      </transition>
+    </q-page-sticky>
     <div class="q-pa-md column">
       <transition name="slide" mode="out-in" appear>
-        <div class="col self-center" style="margin-top: 2em;">
+        <div class="col self-center" style="margin-top: 5em;">
           <span class="text-h1 text-weight-bold non-selectable">SITES</span>
         </div>
       </transition>
@@ -49,8 +56,8 @@
       </div>
       -->
     </div>
-    <q-page-sticky position="bottom" :offset="fabPos_2">
-      <transition name="slide" mode="out-in" appear>
+    <q-page-sticky position="bottom" :offset="dn_fabPos_2">
+      <transition name="fade" mode="out-in" appear>
         <div class="col self-center" style="transition-delay:.6s;">
           <q-btn icon="keyboard_arrow_down" size="20px" color="white" flat round to="/about" />
         </div>
@@ -65,7 +72,8 @@ export default {
 
   data() {
     return {
-      fabPos_2: [0,30]
+      dn_fabPos_2: [0,30],
+      up_fabPos_1: [0, 0]
     };
   },
 
@@ -382,22 +390,5 @@ export default {
 
 span {
   color: aliceblue;
-}
-
-.slide-enter-active {
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-}
-
-.slide-leave-active {
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.slide-enter,
-.slide-leave-to {
-  -webkit-transform: translateY(2rem);
-  transform: translateY(2rem);
-  opacity: 0;
 }
 </style>

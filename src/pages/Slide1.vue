@@ -17,8 +17,8 @@
         </div>
       </transition>
     </div>
-    <q-page-sticky position="bottom" :offset="fabPos_1">
-      <transition name="slide" mode="out-in" appear>
+    <q-page-sticky position="bottom" :offset="dn_fabPos_1">
+      <transition name="fade" mode="out-in" appear>
         <div class="col self-center" style="transition-delay:.6s;">
           <q-btn icon="keyboard_arrow_down" size="20px" color="white" flat round to="/sites" />
         </div>
@@ -33,7 +33,7 @@ export default {
   components: {},
   data() {
     return {
-      fabPos_1: [0, 30]
+      dn_fabPos_1: [0, 30]
     };
   }
 };
@@ -47,22 +47,5 @@ span {
 #logo {
   max-width: 300px;
   max-height: 300px;
-}
-
-.slide-enter-active {
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-}
-
-.slide-leave-active {
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.slide-enter,
-.slide-leave-to {
-  -webkit-transform: translateY(2rem);
-  transform: translateY(2rem);
-  opacity: 0;
 }
 </style>
