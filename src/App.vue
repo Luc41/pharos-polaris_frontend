@@ -29,21 +29,86 @@
     </q-footer>
 
     <q-page-container id="content">
-      <transition name="slide" mode="out-in" appear>
+      <transition name="Rfade" mode="out-in" appear>
         <router-view />
       </transition>
+      <q-page-sticky position="bottom-right" :offset="fabPos">
+        <q-fab
+          class="shadow-5"
+          v-model="fabMain"
+          color="blue"
+          icon="keyboard_arrow_up"
+          direction="up"
+          vertical-actions-align="right"
+          flat
+          :disable="draggingFab"
+          v-touch-pan.prevent.mouse="moveFab"
+        >
+          <q-fab-action
+            class="shadow-5"
+            label-position="left"
+            color="warning"
+            icon="contact_support"
+            label="CONTACT US"
+            to="/contact"
+            flat
+            :disable="draggingFab"
+          />
+          <q-fab-action
+            class="shadow-5"
+            label-position="left"
+            color="info"
+            icon="info"
+            label="ABOUT"
+            to="/about"
+            flat
+            :disable="draggingFab"
+          />
+          <q-fab-action
+            class="shadow-5"
+            label-position="left"
+            color="secondary"
+            icon="web"
+            label="SITES"
+            to="/sites"
+            flat
+            :disable="draggingFab"
+          />
+          <q-fab-action
+            class="shadow-5"
+            label-position="left"
+            color="primary"
+            icon="home"
+            label="HOME"
+            to="/"
+            flat
+            :disable="draggingFab"
+          />
+        </q-fab>
+      </q-page-sticky>
     </q-page-container>
   </q-layout>
 </template>
 
 <script>
 export default {
-  name: "LayoutDefault",
+  name: "App",
 
   components: {},
 
   data() {
-    return {};
+    return {
+      fabMain: true,
+      fabPos: [50, 100],
+      draggingFab: false
+    };
+  },
+  methods: {
+    moveFab(ev) {
+      this.draggingFab = ev.isFirst !== true && ev.isFinal !== true;
+
+      this.fabPos = [this.fabPos[0] - ev.delta.x, this.fabPos[1] - ev.delta.y];
+    }
   }
 };
 </script>
@@ -101,7 +166,6 @@ a {
   color: #ffc12d;
 }
 
-/* page transition */
 .slide-enter-active {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
@@ -116,6 +180,28 @@ a {
 .slide-leave-to {
   -webkit-transform: translateY(2rem);
   transform: translateY(2rem);
+  opacity: 0;
+}
+
+.Rfade-enter-active,
+.Rfade-leave-active {
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+.Rfade-enter,
+.Rfade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  -webkit-transition: opacity 1.5s ease;
+  transition: opacity 1.5s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
 }
 </style>
