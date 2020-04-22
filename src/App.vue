@@ -36,52 +36,47 @@
         <q-fab
           class="shadow-5"
           v-model="fabMain"
-          color="blue"
+          color="grey-14"
           icon="keyboard_arrow_up"
           direction="up"
           vertical-actions-align="right"
-          flat
           :disable="draggingFab"
           v-touch-pan.prevent.mouse="moveFab"
         >
           <q-fab-action
             class="shadow-5"
             label-position="left"
-            color="warning"
+            color="grey-14"
             icon="contact_support"
             label="CONTACT US"
             to="/contact"
-            flat
             :disable="draggingFab"
           />
           <q-fab-action
             class="shadow-5"
             label-position="left"
-            color="info"
+            color="grey-14"
             icon="info"
             label="ABOUT"
             to="/about"
-            flat
             :disable="draggingFab"
           />
           <q-fab-action
             class="shadow-5"
             label-position="left"
-            color="secondary"
+            color="grey-14"
             icon="web"
             label="SITES"
             to="/sites"
-            flat
             :disable="draggingFab"
           />
           <q-fab-action
             class="shadow-5"
             label-position="left"
-            color="primary"
+            color="grey-14"
             icon="home"
             label="HOME"
             to="/"
-            flat
             :disable="draggingFab"
           />
         </q-fab>
@@ -98,7 +93,7 @@ export default {
 
   data() {
     return {
-      fabMain: true,
+      fabMain: false,
       fabPos: [50, 100],
       draggingFab: false
     };
@@ -183,10 +178,14 @@ a {
   opacity: 0;
 }
 
-.Rfade-enter-active,
+.Rfade-enter-active {
+  -webkit-transition: opacity 0.1s ease;
+  transition: opacity 0.1s ease;
+}
+
 .Rfade-leave-active {
-  -webkit-transition: opacity .5s ease;
-  transition: opacity .5s ease;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .Rfade-enter,
