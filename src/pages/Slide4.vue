@@ -1,12 +1,5 @@
 <template>
   <q-page class="flex-center">
-    <q-page-sticky position="top" :offset="up_fabPos_3">
-      <transition name="fade" mode="out-in" appear>
-        <div class="col self-center" style="transition-delay:.6s;">
-          <q-btn icon="keyboard_arrow_up" size="20px" color="white" flat round to="/about" />
-        </div>
-      </transition>
-    </q-page-sticky>
     <div class="q-pa-md column">
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="margin-top: 5em;">
@@ -59,6 +52,13 @@
         </div>
       </transition>
     </div>
+    <q-page-sticky position="bottom" :offset="dn_fabPos_4">
+      <transition name="fade" mode="out-in" appear>
+        <div class="col self-center" style="transition-delay:.8s;">
+          <q-btn icon="keyboard_arrow_up" size="20px" color="white" flat to="/about" />
+        </div>
+      </transition>
+    </q-page-sticky>
   </q-page>
 </template>
 
@@ -73,7 +73,7 @@ export default {
   data() {
     return {
       tab: "dev",
-      up_fabPos_3:[0, 0],
+      dn_fabPos_4: [0, 30],
       info_1: {
         name: "Luc-41",
         date: "March 16,2020",
@@ -92,5 +92,4 @@ export default {
 </script>
 
 <style>
-
 </style>
