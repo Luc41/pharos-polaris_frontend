@@ -13,7 +13,7 @@
       </transition>
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="transition-delay:.4s;">
-          <img id="logo" alt="main logo" src="../assets/logo-white.png" />
+          <img id="logo" alt="main logo" src="../assets/logo-v1.png" />
         </div>
       </transition>
     </div>
