@@ -52,8 +52,10 @@
     <q-page-sticky position="bottom" :offset="dn_fabPos_2">
       <transition name="fade" mode="out-in" appear>
         <div class="col self-center" style="transition-delay:.6s;">
-          <q-btn icon="keyboard_arrow_up" size="20px" color="white" flat to="/" />
-          <q-btn icon="keyboard_arrow_down" size="20px" color="white" flat to="/about" />
+          <q-btn-group flat>
+            <q-btn icon="keyboard_arrow_up" size="lg" color="white" flat to="/" />
+            <q-btn icon="keyboard_arrow_down" size="lg" color="white" flat to="/about" />
+          </q-btn-group>
         </div>
       </transition>
     </q-page-sticky>
