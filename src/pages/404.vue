@@ -1,15 +1,16 @@
 <template>
-  <q-page class="flex-center">
-    <q-img src="../assets/404.png"></q-img>
+  <q-page class="flex flex-center">
+    <transition name="slide" mode="out-in" appear>
+      <img src="../assets/404.png" />
+    </transition>
   </q-page>
 </template>
 
 <script>
 export default {
-  name: "Slide3",
+  name: "page404",
   data() {
-    return {
-    };
+    return {};
   }
 };
 </script>

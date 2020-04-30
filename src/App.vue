@@ -6,7 +6,7 @@
           <img src="./assets/logo-v2.png" alt="navbar logo" />
         </q-avatar>
         <q-toolbar-title>Pharos-Polaris</q-toolbar-title>
-        <q-tabs align="right">
+        <q-tabs align="right" v-if="this.$route.name !== '404'">
           <q-route-tab to="/" label="home" />
           <q-route-tab to="/sites" label="sites" />
           <q-route-tab to="/about" label="about" />
@@ -32,6 +32,7 @@
       <transition name="Rfade" mode="out-in" appear>
         <router-view />
       </transition>
+
       <q-page-sticky position="bottom-right" :offset="fabPos">
         <q-fab
           class="shadow-5"
