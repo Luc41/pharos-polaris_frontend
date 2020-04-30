@@ -27,6 +27,11 @@ Vue.use(VueRouter)
     path: '/contact',
     name: 'CONTACT',
     component: () => import('../pages/Slide4')
+  },
+  {
+    path: '*',
+    name: '404',
+    component: () => import('../pages/404')
   }
 ]
 
