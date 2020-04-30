@@ -1,9 +1,9 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header class="bg-transparent text-white">
+    <q-header class="bg-transparent text-white" v-show="this.$route.name !== '404'">
       <q-toolbar>
         <q-avatar>
-          <img src="./assets/logo-white.png" alt="navbar logo" />
+          <img src="./assets/logo-v2.png" alt="navbar logo" />
         </q-avatar>
         <q-toolbar-title>Pharos-Polaris</q-toolbar-title>
         <q-tabs align="right">
@@ -15,7 +15,7 @@
       </q-toolbar>
     </q-header>
 
-    <q-footer class="bg-transparent text-grey-13" reveal>
+    <q-footer class="bg-transparent text-grey-13" reveal v-show="this.$route.name !== '404'">
       <q-toolbar>
         <q-toolbar-title class="text-caption text-left">
           Powered by
@@ -32,7 +32,8 @@
       <transition name="Rfade" mode="out-in" appear>
         <router-view />
       </transition>
-      <q-page-sticky position="bottom-right" :offset="fabPos">
+
+      <q-page-sticky position="bottom-right" :offset="fabPos" v-show="this.$route.name !== '404'">
         <q-fab
           class="shadow-5"
           v-model="fabMain"
@@ -119,6 +120,7 @@ html {
   height: 100%;
 }
 body {
+  overflow: hidden;
   margin: 0;
   padding: 0;
   height: 100%;

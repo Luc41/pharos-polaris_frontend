@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex flex-center">
-    <div class="column">
+    <div class="q-pa-md column">
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center">
           <span class="text-h1 text-weight-bold non-selectable">Pharos-Polaris.com</span>
@@ -13,7 +13,7 @@
       </transition>
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="transition-delay:.4s;">
-          <img id="logo" alt="main logo" src="../assets/logo-white.png" />
+          <img id="logo" alt="main logo" src="../assets/logo-v2.png" />
         </div>
       </transition>
     </div>
