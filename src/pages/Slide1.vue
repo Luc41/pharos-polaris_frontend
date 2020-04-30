@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex flex-center">
-    <div class="column">
+    <div class="q-pa-md column">
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center">
           <span class="text-h1 text-weight-bold non-selectable">Pharos-Polaris.com</span>
