@@ -4,7 +4,7 @@
       <div class="col col-auto">
         <q-item-section avatar>
           <q-avatar color="indigo-6" size="52px" font-size="52px" text-color="white">
-            <img :src="'https://s.gravatar.com/avatar/' + info.imageHash" alt="avatar" />
+            <img :src="'https://s.gravatar.com/avatar/' + imageHash" alt="avatar" />
           </q-avatar>
         </q-item-section>
       </div>
@@ -25,11 +25,15 @@
 </template>
 
 <script>
+import md5 from "md5";
+
 export default {
   name: "memcard",
   props: ["info"],
   data() {
-    return {};
+    return {
+      imageHash: [md5(this.info.mailaddress)]
+    };
   }
 };
 </script>

@@ -1,6 +1,6 @@
 {
   "name": "pharos-polaris",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -10,8 +10,8 @@
   "dependencies": {
     "@quasar/extras": "^1.7.0",
     "core-js": "^3.6.5",
-    "gsap": "^3.2.6",
-    "quasar": "^1.9.16",
+    "md5": "^2.2.1",
+    "quasar": "^1.10.0",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6"
   },

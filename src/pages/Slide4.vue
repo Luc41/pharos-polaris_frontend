@@ -8,7 +8,8 @@
       </transition>
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="margin-top: 2em; transition-delay:.2s;">
-          <span class="text-h4 non-selectable">something in here</span>
+          <span class="text-h4 non-selectable">欢迎向我们提出意见和建议以及获取支持
+          </span>
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
@@ -55,7 +56,9 @@
     <q-page-sticky position="bottom" :offset="dn_fabPos_4">
       <transition name="fade" mode="out-in" appear>
         <div class="col self-center" style="transition-delay:.8s;">
-          <q-btn icon="keyboard_arrow_up" size="20px" color="white" flat to="/about" />
+          <q-btn-group flat rounded>
+            <q-btn icon="keyboard_arrow_up" size="lg" color="white" flat to="/about" />
+          </q-btn-group>
         </div>
       </transition>
     </q-page-sticky>
@@ -78,13 +81,11 @@ export default {
         name: "Luc-41",
         date: "March 16,2020",
         mailaddress: "whthunder@live.cn",
-        imageHash: "a969511fe630077db18e2151af18f980"
       },
       info_2: {
         name: "Mr.Chathedral",
         date: "March 16,2020",
         mailaddress: "651151844@qq.com",
-        imageHash: "b98559ffe9383ba2132393ca87116722"
       }
     };
   }

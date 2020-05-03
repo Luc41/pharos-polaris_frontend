@@ -8,7 +8,7 @@
       </transition>
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="margin-top: 1em; transition-delay:.2s;">
-          <span class="text-h4 non-selectable">something in here</span>
+          <span class="text-h4 non-selectable">这是我们的站点</span>
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
@@ -52,8 +52,10 @@
     <q-page-sticky position="bottom" :offset="dn_fabPos_2">
       <transition name="fade" mode="out-in" appear>
         <div class="col self-center" style="transition-delay:.6s;">
-          <q-btn icon="keyboard_arrow_up" size="20px" color="white" flat to="/" />
-          <q-btn icon="keyboard_arrow_down" size="20px" color="white" flat to="/about" />
+          <q-btn-group flat rounded>
+            <q-btn icon="keyboard_arrow_up" size="lg" color="white" flat to="/" />
+            <q-btn icon="keyboard_arrow_down" size="lg" color="white" flat to="/about" />
+          </q-btn-group>
         </div>
       </transition>
     </q-page-sticky>

@@ -29,9 +29,13 @@ Vue.use(VueRouter)
     component: () => import('../pages/Slide4')
   },
   {
-    path: '*',
+    path: '/404',
     name: '404',
     component: () => import('../pages/404')
+  },
+  {
+    path: '*',
+    redirect: '/404'
   }
 ]
 

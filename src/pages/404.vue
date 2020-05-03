@@ -1,5 +1,5 @@
 <template>
-  <q-page class>
+  <q-page class="q-pa-md">
     <div class="q-pa-md column">
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center">
@@ -8,27 +8,21 @@
       </transition>
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="transition-delay: .2s;">
-          <span class="text-h4 non-selectable">您所访问的页面不存在</span>
+          <span class="text-h4 non-selectable">您访问的页面不存在，请检查URL后再试</span>
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
-        <div class="col" style="transition-delay: .4s;">
-          <div class="row">
-            <div class="col-1" />
-            <div class="col">
-              <q-img id="img404" alt="404" :src="imgSrc" spinner-color="white" />
-              <q-btn
-                class="full-width"
-                icon="home"
-                label="返回首页"
-                size="xl"
-                to="/"
-                color="grey-14"
-                unelevated
-              />
-            </div>
-            <div class="col-1" />
-          </div>
+        <div class="col q-pa-lg self-center" style="transition-delay: .4s;">
+          <q-img id="img404" alt="404" :src="imgSrc" spinner-color="white" />
+          <q-btn
+            class="full-width"
+            icon="home"
+            label="返回首页"
+            size="lg"
+            to="/"
+            color="grey-14"
+            unelevated
+          />
         </div>
       </transition>
     </div>
@@ -48,7 +42,8 @@ export default {
 
 <style lang="sass" scoped>
 #img404 
-  height: 600px
+  min-height: 300px
+  min-width: 300px
   position: relative
 .col
   margin: 1em 0 1em 0
