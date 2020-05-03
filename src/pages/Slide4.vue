@@ -8,15 +8,14 @@
       </transition>
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="margin-top: 2em; transition-delay:.2s;">
-          <span class="text-h4 non-selectable">欢迎向我们提出意见和建议以及获取支持
-          </span>
+          <span class="text-h4 non-selectable">欢迎向我们提出意见和建议以及获取支持</span>
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="margin-top: 2em; transition-delay:.4s;">
           <q-tabs v-model="tab" dense align="justify" narrow-indicator>
-            <q-tab class="text-blue" label="developers" name="dev" icon="code" />
-            <q-tab class="text-teal" label="contributers" name="contri" icon="archive" />
+            <q-tab class="text-blue" label="developers / 开发者们" name="dev" icon="code" />
+            <q-tab class="text-teal" label="contributers / 贡献者们 " name="contri" icon="archive" />
           </q-tabs>
         </div>
       </transition>
@@ -80,12 +79,12 @@ export default {
       info_1: {
         name: "Luc-41",
         date: "March 16,2020",
-        mailaddress: "whthunder@live.cn",
+        mailaddress: "whthunder@live.cn"
       },
       info_2: {
         name: "Mr.Chathedral",
         date: "March 16,2020",
-        mailaddress: "651151844@qq.com",
+        mailaddress: "651151844@qq.com"
       }
     };
   }
