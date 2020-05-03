@@ -80,13 +80,11 @@ export default {
         name: "Luc-41",
         date: "March 16,2020",
         mailaddress: "whthunder@live.cn",
-        imageHash: "a969511fe630077db18e2151af18f980"
       },
       info_2: {
         name: "Mr.Chathedral",
         date: "March 16,2020",
         mailaddress: "651151844@qq.com",
-        imageHash: "b98559ffe9383ba2132393ca87116722"
       }
     };
   }
