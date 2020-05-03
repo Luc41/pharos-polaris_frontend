@@ -2,9 +2,6 @@
   <q-layout view="hHh lpR fFf">
     <q-header class="bg-transparent text-white" v-show="this.$route.name !== '404'">
       <q-toolbar>
-        <q-avatar>
-          <img src="./assets/logo-v2.png" alt="navbar logo" />
-        </q-avatar>
         <q-toolbar-title>Pharos-Polaris</q-toolbar-title>
         <q-tabs align="right">
           <q-route-tab to="/" label="home" :ripple="false" />
