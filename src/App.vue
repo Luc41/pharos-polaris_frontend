@@ -111,10 +111,10 @@ export default {
 /*预览：https://fonts.google.com/?preview.text_type=custom*/
 /*@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');*/
 /*@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');*/
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300&display=swap');
 
 span {
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Exo', sans-serif;
 }
 
 /*background style*/
