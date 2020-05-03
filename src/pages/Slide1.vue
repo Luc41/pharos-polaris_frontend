@@ -41,13 +41,11 @@ export default {
 };
 </script>
 
-<style scope>
-span {
-  color: aliceblue;
-}
+<style lang="sass" scope>
+span
+  color: aliceblue
 
-#logo {
-  max-width: 300px;
-  max-height: 300px;
-}
+#logo
+  max-width: 300px
+  max-height: 300px
 </style>

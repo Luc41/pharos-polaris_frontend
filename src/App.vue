@@ -7,10 +7,10 @@
         </q-avatar>
         <q-toolbar-title>Pharos-Polaris</q-toolbar-title>
         <q-tabs align="right">
-          <q-route-tab to="/" label="home" />
-          <q-route-tab to="/sites" label="sites" />
-          <q-route-tab to="/about" label="about" />
-          <q-route-tab to="/contact" label="contact us" />
+          <q-route-tab to="/" label="home" :ripple="false" />
+          <q-route-tab to="/sites" label="sites" :ripple="false" />
+          <q-route-tab to="/about" label="about" :ripple="false" />
+          <q-route-tab to="/contact" label="contact us" :ripple="false" />
         </q-tabs>
       </q-toolbar>
     </q-header>
@@ -35,7 +35,7 @@
 
       <q-page-sticky position="bottom-right" :offset="fabPos" v-show="this.$route.name !== '404'">
         <q-fab
-          class="shadow-5"
+          class="no-shadow"
           v-model="fabMain"
           color="grey-14"
           icon="keyboard_arrow_up"
@@ -45,7 +45,7 @@
           v-touch-pan.prevent.mouse="moveFab"
         >
           <q-fab-action
-            class="shadow-5"
+            class="no-shadow"
             label-position="left"
             color="grey-14"
             icon="contact_support"
@@ -54,7 +54,7 @@
             :disable="draggingFab"
           />
           <q-fab-action
-            class="shadow-5"
+            class="no-shadow"
             label-position="left"
             color="grey-14"
             icon="info"
@@ -63,7 +63,7 @@
             :disable="draggingFab"
           />
           <q-fab-action
-            class="shadow-5"
+            class="no-shadow"
             label-position="left"
             color="grey-14"
             icon="web"
@@ -72,7 +72,7 @@
             :disable="draggingFab"
           />
           <q-fab-action
-            class="shadow-5"
+            class="no-shadow"
             label-position="left"
             color="grey-14"
             icon="home"
@@ -110,7 +110,7 @@ export default {
 </script>
 
 <style>
-/*备选字体*/
+/*fonts*/
 /*预览：https://fonts.google.com/?preview.text_type=custom*/
 /*@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');*/
 /*@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');*/
@@ -163,6 +163,8 @@ a {
   color: #ffc12d;
 }
 
+/*transtion*/
+/*transtion for pages*/
 .slide-enter-active {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
@@ -180,6 +182,7 @@ a {
   opacity: 0;
 }
 
+/*transtion for routes*/
 .Rfade-enter-active {
   -webkit-transition: opacity 0.1s ease;
   transition: opacity 0.1s ease;
@@ -195,6 +198,7 @@ a {
   opacity: 0;
 }
 
+/*transtion for buttons*/
 .fade-enter-active,
 .fade-leave-active {
   -webkit-transition: opacity 1.5s ease;
