@@ -8,7 +8,7 @@
       </transition>
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="transition-delay: .2s;">
-          <span class="text-h4 non-selectable">您所访问的页面不存在</span>
+          <span class="text-h4 non-selectable">您访问的页面不存在，请检查URL后再试</span>
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
