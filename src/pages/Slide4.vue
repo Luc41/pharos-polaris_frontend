@@ -8,7 +8,8 @@
       </transition>
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="margin-top: 2em; transition-delay:.2s;">
-          <span class="text-h4 non-selectable">something in here</span>
+          <span class="text-h4 non-selectable">欢迎向我们提出意见和建议以及获取支持
+          </span>
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
