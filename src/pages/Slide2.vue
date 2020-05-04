@@ -12,72 +12,60 @@
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
-        <div class="col" style="margin-top: 2em; transition-delay:.4s; margin-bottom: 18em;">
+        <div class="col" style="margin-top: 2em; transition-delay:.4s;">
           <div class="row">
-            <div class="col" />
+            <div class="col-2" />
             <div class="col q-ma-md">
-              <q-card class="bg-grey-14">
+              <q-card id="card" class="bg-grey-14">
                 <q-img
+                  id="img"
                   alt="forum thumbnail"
                   src="https://i.picsum.photos/id/1015/1200/800.jpg"
                   spinner-color="white"
                 >
                   <div class="absolute-bottom text-right">
-                    <span class="text-h4">FORUM</span>
+                    <span class="text-h4">
+                      something in here
+                      <q-space />
+                      <a
+                        class="hvr-icon-wobble-horizontal"
+                        href="https://forum.pharos-polaris.com"
+                        target="_blank"
+                      >
+                        FORUM
+                        <q-icon class="hvr-icon" name="navigate_next" style="margin-top: -.2em;" />
+                      </a>
+                    </span>
                   </div>
                 </q-img>
-                <q-card-section>
-                  <div class="row">
-                    <div class="col">
-                      <span class="text-body">something in here</span>
-                    </div>
-                    <div class="col-auto">
-                      <a href="https://forum.pharos-polaris.com" target="_blank">
-                        <q-btn
-                          class="text-white self-right"
-                          flat
-                          :ripple="false"
-                          color="dark"
-                          icon="navigate_next"
-                        >GO</q-btn>
-                      </a>
-                    </div>
-                  </div>
-                </q-card-section>
               </q-card>
             </div>
             <div class="col q-ma-md">
-              <q-card class="bg-grey-14">
+              <q-card id="card" class="bg-grey-14">
                 <q-img
+                  id="img"
                   alt="wiki thumbnail"
                   src="https://i.picsum.photos/id/1016/1200/800.jpg"
                   spinner-color="white"
                 >
                   <div class="absolute-bottom text-right">
-                    <span class="text-h4">WIKI</span>
+                    <span class="text-h4">
+                      something in here
+                      <q-space />
+                      <a
+                        class="hvr-icon-wobble-horizontal"
+                        href="https://wiki.pharos-polaris.com"
+                        target="_blank"
+                      >
+                        WIKI
+                        <q-icon class="hvr-icon" name="navigate_next" style="margin-top: -.2em;" />
+                      </a>
+                    </span>
                   </div>
                 </q-img>
-                <q-card-section>
-                  <div class="row">
-                    <div class="col">
-                      <span class="text-body">something in here</span>
-                    </div>
-                    <div class="col-auto">
-                      <a href="https://wiki.pharos-polaris.com" target="_blank">
-                        <q-btn
-                          class="text-white"
-                          flat
-                          :ripple="false"
-                          color="dark"
-                          icon="navigate_next"
-                        >GO</q-btn>
-                      </a>
-                    </div>
-                  </div>
-                </q-card-section>
               </q-card>
             </div>
-            <div class="col" />
+            <div class="col-2" />
           </div>
         </div>
       </transition>
@@ -114,6 +102,85 @@ export default {
 };
 </script>
 
-<style lang="sass" scope>
+<style lang="scss" scope>
+#card #img {
+  min-height: 300px;
+}
 
+/* Icon Wobble Horizontal */
+@-webkit-keyframes hvr-icon-wobble-horizontal {
+  16.65% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px);
+  }
+  33.3% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes hvr-icon-wobble-horizontal {
+  16.65% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px);
+  }
+  33.3% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+.hvr-icon-wobble-horizontal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-icon-wobble-horizontal .hvr-icon {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.hvr-icon-wobble-horizontal:hover .hvr-icon, .hvr-icon-wobble-horizontal:focus .hvr-icon, .hvr-icon-wobble-horizontal:active .hvr-icon {
+  -webkit-animation-name: hvr-icon-wobble-horizontal;
+  animation-name: hvr-icon-wobble-horizontal;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
 </style>
