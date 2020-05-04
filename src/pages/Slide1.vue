@@ -3,14 +3,14 @@
     <div class="q-pa-md column">
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center">
-          <span id="title" class="text-h1 text-weight-bold non-selectable">Pharos-Polaris.com</span>
+          <span id="subtitle" class="text-h3 non-selectable">welcome to</span>
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
-        <div class="col self-center" style="transition-delay:.2s;">
-          <span id="subtitle" class="text-h3 non-selectable">something in here</span>
+        <div class="col self-center" style="transition-delay:.2s; margin-top: 1em;">
+          <span id="title" class="text-h1 text-weight-bold non-selectable">Pharos-Polaris.com</span>
         </div>
-      </transition>
+      </transition>      
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="transition-delay:.4s;">
           <img class="q-ma-xl" id="logo" alt="main logo" src="../assets/logo-v2.png" />
