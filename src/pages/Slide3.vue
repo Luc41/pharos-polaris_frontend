@@ -3,12 +3,12 @@
     <div class="q-pa-md column">
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="margin-top: 5em;">
-          <span class="text-h1 text-weight-bold non-selectable">ABOUT</span>
+          <span id="title" class="text-h1 text-weight-bold non-selectable">ABOUT</span>
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="margin-top: 2em; transition-delay:.2s;">
-          <span class="text-h4 non-selectable">关于本网站</span>
+          <span id="subtitle" class="text-h4 non-selectable">关于本站</span>
         </div>
       </transition>
     </div>
@@ -36,5 +36,6 @@ export default {
 };
 </script>
 
-<style>
+<style lang="sass" scope>
+
 </style>

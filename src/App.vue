@@ -2,8 +2,8 @@
   <q-layout view="hHh lpR fFf">
     <q-header class="bg-transparent text-white" v-show="this.$route.name !== '404'">
       <q-toolbar>
-        <q-toolbar-title>Pharos-Polaris</q-toolbar-title>
-        <q-tabs align="right">
+        <q-toolbar-title id="title" class="non-selectable">Pharos-Polaris</q-toolbar-title>
+        <q-tabs align="right" style="font-family: 'Josefin Sans', sans-serif; font-weight: 300">
           <q-route-tab to="/" label="home" :ripple="false" />
           <q-route-tab to="/sites" label="sites" :ripple="false" />
           <q-route-tab to="/about" label="about" :ripple="false" />
@@ -13,7 +13,7 @@
     </q-header>
 
     <q-footer class="bg-transparent text-grey-13" reveal v-show="this.$route.name !== '404'">
-      <q-toolbar>
+      <q-toolbar id="subtitle">
         <q-toolbar-title class="text-caption text-left">
           Powered by
           <a href="https://cn.vuejs.org/" target="_blank">Vue.js</a> and
@@ -30,7 +30,12 @@
         <router-view />
       </transition>
 
-      <q-page-sticky position="bottom-right" :offset="fabPos" v-show="this.$route.name !== '404'">
+      <q-page-sticky
+        position="bottom-right"
+        :offset="fabPos"
+        style="font-family: 'Josefin Sans', sans-serif; font-weight: 300"
+        v-show="this.$route.name !== '404'"
+      >
         <q-fab
           class="no-shadow"
           v-model="fabMain"
@@ -107,10 +112,29 @@ export default {
 </script>
 
 <style>
-/*fonts*/
-/*预览：https://fonts.google.com/?preview.text_type=custom*/
-/*@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');*/
-/*@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');*/
+/*webfonts*/
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap");
+
+/*font weight */
+#title {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+}
+
+#subtitle {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+span {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+/*fonts color*/
+span {
+  color: aliceblue;
+}
 
 /*background style*/
 html {

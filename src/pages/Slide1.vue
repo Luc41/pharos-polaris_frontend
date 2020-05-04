@@ -3,12 +3,12 @@
     <div class="q-pa-md column">
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center">
-          <span class="text-h1 text-weight-bold non-selectable">Pharos-Polaris.com</span>
+          <span id="title" class="text-h1 text-weight-bold non-selectable">Pharos-Polaris.com</span>
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="transition-delay:.2s;">
-          <span class="text-h3 non-selectable">something in here</span>
+          <span id="subtitle" class="text-h3 non-selectable">something in here</span>
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
@@ -42,9 +42,6 @@ export default {
 </script>
 
 <style lang="sass" scope>
-span
-  color: aliceblue
-
 #logo
   max-width: 300px
   max-height: 300px

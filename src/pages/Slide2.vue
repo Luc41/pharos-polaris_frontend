@@ -3,41 +3,79 @@
     <div class="q-pa-md column">
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="margin-top: 5em;">
-          <span class="text-h1 text-weight-bold non-selectable">SITES</span>
+          <span id="title" class="text-h1 text-weight-bold non-selectable">SITES</span>
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="margin-top: 1em; transition-delay:.2s;">
-          <span class="text-h4 non-selectable">这是我们的站点</span>
+          <span id="subtitle" class="text-h4 non-selectable">欢迎访问我们的站点</span>
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
         <div class="col" style="margin-top: 2em; transition-delay:.4s; margin-bottom: 18em;">
           <div class="row">
             <div class="col" />
-            <div class="col-8">
-              <div class="panels shadow-10">
-                <div class="panels__container">
-                  <a href="https://forum.pharos-polaris.com" target="_blank" class="panel">
-                    <div
-                      class="panel__content"
-                      style="background-image: url(https://i.picsum.photos/id/10/2500/1667.jpg);"
-                    >
-                      <span class="panel__title text-h2">FORUM</span>
-                      <span class="text-h4" style="margin-top: 1em">something in here</span>
+            <div class="col q-ma-md">
+              <q-card class="bg-grey-14">
+                <q-img
+                  alt="forum thumbnail"
+                  src="https://i.picsum.photos/id/1015/1200/800.jpg"
+                  spinner-color="white"
+                >
+                  <div class="absolute-bottom text-right">
+                    <span class="text-h4">FORUM</span>
+                  </div>
+                </q-img>
+                <q-card-section>
+                  <div class="row">
+                    <div class="col">
+                      <span class="text-body">something in here</span>
                     </div>
-                  </a>
-                  <a href="https://wiki.pharos-polaris.com" target="_blank" class="panel">
-                    <div
-                      class="panel__content"
-                      style="background-image: url(https://i.picsum.photos/id/1000/5626/3635.jpg)"
-                    >
-                      <span class="panel__title text-h2">WIKI</span>
-                      <span class="text-h4" style="margin-top: 1em">something in here</span>
+                    <div class="col-auto">
+                      <a href="https://forum.pharos-polaris.com" target="_blank">
+                        <q-btn
+                          class="text-white self-right"
+                          flat
+                          :ripple="false"
+                          color="dark"
+                          icon="navigate_next"
+                        >GO</q-btn>
+                      </a>
                     </div>
-                  </a>
-                </div>
-              </div>
+                  </div>
+                </q-card-section>
+              </q-card>
+            </div>
+            <div class="col q-ma-md">
+              <q-card class="bg-grey-14">
+                <q-img
+                  alt="wiki thumbnail"
+                  src="https://i.picsum.photos/id/1016/1200/800.jpg"
+                  spinner-color="white"
+                >
+                  <div class="absolute-bottom text-right">
+                    <span class="text-h4">WIKI</span>
+                  </div>
+                </q-img>
+                <q-card-section>
+                  <div class="row">
+                    <div class="col">
+                      <span class="text-body">something in here</span>
+                    </div>
+                    <div class="col-auto">
+                      <a href="https://wiki.pharos-polaris.com" target="_blank">
+                        <q-btn
+                          class="text-white"
+                          flat
+                          :ripple="false"
+                          color="dark"
+                          icon="navigate_next"
+                        >GO</q-btn>
+                      </a>
+                    </div>
+                  </div>
+                </q-card-section>
+              </q-card>
             </div>
             <div class="col" />
           </div>
@@ -76,314 +114,6 @@ export default {
 };
 </script>
 
-<style scope>
-/*////////////////////////////////////////*/
-/* Layout */
-.panels {
-  width: 100%;
-  height: 300%;
-  overflow: hidden;
-  background: #000;
-  pointer-events: none;
-}
-.panels__container {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  -webkit-box-align: stretch;
-  align-items: stretch;
-  height: 100%;
-  width: 120%;
-  margin: 0 -10%;
-  visibility: hidden;
-}
-.panel {
-  display: inline-block;
-  height: 100%;
-  visibility: visible;
-  position: relative;
-  overflow: hidden;
-  -webkit-box-flex: 1;
-  flex: 1;
-  cursor: pointer;
-  text-decoration: none;
-}
-/*////////////////////////////////////////*/
-/* Image/Text Container */
-.panel__content {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-direction: column;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  background: center center no-repeat;
-  background-size: cover;
-}
-.panel__content:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: #000;
-  opacity: 0.5;
-  -webkit-transition: opacity 1s cubic-bezier(0.6, 0, 0.2, 1);
-  transition: opacity 1s cubic-bezier(0.6, 0, 0.2, 1);
-}
-/*////////////////////////////////////////*/
-/* Title */
-.panel__title {
-  pointer-events: auto;
-  color: #fff;
-  position: relative;
-  z-index: 1;
-  -webkit-transition: color 1s cubic-bezier(0.6, 0, 0.2, 1);
-  transition: color 1s cubic-bezier(0.6, 0, 0.2, 1);
-}
-.panel__title:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: #000;
-  background: rgba(0, 0, 0, 0.7);
-  border: solid 2px #ffc12d;
-  z-index: -1;
-  padding: 0.5em 1em;
-  margin: -0.5em -1em;
-  opacity: 0;
-  -webkit-transform: scale(0.9);
-  transform: scale(0.9);
-  -webkit-transition: all 1s cubic-bezier(0.6, 0, 0.2, 1);
-  transition: all 1s cubic-bezier(0.6, 0, 0.2, 1);
-  -webkit-transition-property: opacity, -webkit-transform;
-  transition-property: opacity, -webkit-transform;
-  transition-property: opacity, transform;
-  transition-property: opacity, transform, -webkit-transform;
-}
-/*////////////////////////////////////////*/
-/* Hover States */
-.panel {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  -webkit-transition: -webkit-transform 1s cubic-bezier(0.6, 0, 0.2, 1);
-  transition: -webkit-transform 1s cubic-bezier(0.6, 0, 0.2, 1);
-  transition: transform 1s cubic-bezier(0.6, 0, 0.2, 1);
-  transition: transform 1s cubic-bezier(0.6, 0, 0.2, 1),
-    -webkit-transform 1s cubic-bezier(0.6, 0, 0.2, 1);
-  /* Inactive panel */
-  /* Override styles for an inactive panel AFTER the hovered panel */
-  /* Active panel */
-}
-.panel .panel__content {
-  -webkit-transform: translateX(10%);
-  transform: translateX(10%);
-  -webkit-transition: -webkit-transform 1s cubic-bezier(0.6, 0, 0.2, 1);
-  transition: -webkit-transform 1s cubic-bezier(0.6, 0, 0.2, 1);
-  transition: transform 1s cubic-bezier(0.6, 0, 0.2, 1);
-  transition: transform 1s cubic-bezier(0.6, 0, 0.2, 1),
-    -webkit-transform 1s cubic-bezier(0.6, 0, 0.2, 1);
-}
-.panel:last-child .panel__content {
-  -webkit-transform: translateX(-10%);
-  transform: translateX(-10%);
-}
-.panels:hover .panel {
-  -webkit-transform: translate3d(-10%, 0, 0);
-  transform: translate3d(-10%, 0, 0);
-}
-.panels:hover .panel .panel__content {
-  -webkit-transform: translateX(14%);
-  transform: translateX(14%);
-}
-.panels:hover .panel .panel__content:before {
-  opacity: 0.7;
-}
-.panels .panel:hover ~ .panel {
-  -webkit-transform: translate3d(10%, 0, 0);
-  transform: translate3d(10%, 0, 0);
-}
-.panels .panel:hover ~ .panel .panel__content {
-  -webkit-transform: translateX(-14%);
-  transform: translateX(-14%);
-}
-.panels .panel:hover {
-  z-index: 2;
-  -webkit-transform: translate3d(10%, 0, 0);
-  transform: translate3d(10%, 0, 0);
-  pointer-events: auto;
-}
-.panels .panel:hover:last-child {
-  -webkit-transform: translate3d(-10%, 0, 0);
-  transform: translate3d(-10%, 0, 0);
-}
-.panels .panel:hover .panel__content {
-  -webkit-transform: translateX(0%);
-  transform: translateX(0%);
-}
-.panels .panel:hover .panel__content:before {
-  opacity: 0;
-}
-.panels .panel:hover .panel__title {
-  color: #ffc12d;
-}
-.panels .panel:hover .panel__title:before {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
-/*////////////////////////////////////////*/
-/* Vertical layout */
-/*.panels--stacked {*/
-/* Inactive panel */
-/* Override styles for an inactive panel AFTER the hovered panel */
-/* Active panel */
-/*}*/
-.panels--stacked .panels__container {
-  width: 100%;
-  height: 120%;
-  margin: -10% 0;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-direction: column;
-}
-.panels--stacked .panel {
-  height: 50%;
-  width: 100%;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-.panels--stacked .panel .panel__content {
-  -webkit-transform: translate3d(0, 10%, 0);
-  transform: translate3d(0, 10%, 0);
-}
-.panels--stacked .panel:last-child .panel__content {
-  -webkit-transform: translate3d(0, -10%, 0);
-  transform: translate3d(0, -10%, 0);
-}
-.panels--stacked:hover .panel {
-  -webkit-transform: translate3d(0, -10%, 0);
-  transform: translate3d(0, -10%, 0);
-}
-.panels--stacked:hover .panel .panel__content {
-  -webkit-transform: translate3d(0, 14%, 0);
-  transform: translate3d(0, 14%, 0);
-}
-.panels--stacked .panel:hover ~ .panel {
-  -webkit-transform: translate3d(0, 10%, 0);
-  transform: translate3d(0, 10%, 0);
-}
-.panels--stacked .panel:hover ~ .panel .panel__content {
-  -webkit-transform: translate3d(0, -14%, 0);
-  transform: translate3d(0, -14%, 0);
-}
-.panels--stacked .panel:hover {
-  -webkit-transform: translate3d(0, 10%, 0);
-  transform: translate3d(0, 10%, 0);
-}
-.panels--stacked .panel:hover:last-child {
-  -webkit-transform: translate3d(0, -10%, 0);
-  transform: translate3d(0, -10%, 0);
-}
-.panels--stacked .panel:hover .panel__content {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-/* Responsive */
-@media (max-width: 550px) {
-  /*.panels {*/
-  /* Inactive panel */
-  /* Override styles for an inactive panel AFTER the hovered panel */
-  /* Active panel */
-  /*}*/
-  .panels .panels__container {
-    width: 100%;
-    height: 120%;
-    margin: -10% 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-  }
-  .panels .panel {
-    height: 50%;
-    width: 100%;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  .panels .panel .panel__content {
-    -webkit-transform: translate3d(0, 10%, 0);
-    transform: translate3d(0, 10%, 0);
-  }
-  .panels .panel:last-child .panel__content {
-    -webkit-transform: translate3d(0, -10%, 0);
-    transform: translate3d(0, -10%, 0);
-  }
-  .panels:hover .panel {
-    -webkit-transform: translate3d(0, -10%, 0);
-    transform: translate3d(0, -10%, 0);
-  }
-  .panels:hover .panel .panel__content {
-    -webkit-transform: translate3d(0, 14%, 0);
-    transform: translate3d(0, 14%, 0);
-  }
-  .panels .panel:hover ~ .panel {
-    -webkit-transform: translate3d(0, 10%, 0);
-    transform: translate3d(0, 10%, 0);
-  }
-  .panels .panel:hover ~ .panel .panel__content {
-    -webkit-transform: translate3d(0, -14%, 0);
-    transform: translate3d(0, -14%, 0);
-  }
-  .panels .panel:hover {
-    -webkit-transform: translate3d(0, 10%, 0);
-    transform: translate3d(0, 10%, 0);
-  }
-  .panels .panel:hover:last-child {
-    -webkit-transform: translate3d(0, -10%, 0);
-    transform: translate3d(0, -10%, 0);
-  }
-  .panels .panel:hover .panel__content {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-/*////////////////////////////////////////*/
-/* Specific Design Setup */
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/oswald/v31/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiYA.ttf)
-    format("truetype");
-}
-.panel__title {
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  font-size: 2.5em;
-  letter-spacing: 0.1em;
-}
-@media (max-width: 800px) {
-  .panel__title {
-    font-size: 1.5em;
-  }
-}
-@media (max-width: 600px) {
-  .panel__title {
-    font-size: 1.25em;
-  }
-}
+<style lang="sass" scope>
 
-span {
-  color: aliceblue;
-}
 </style>
