@@ -19,6 +19,7 @@
               label="developers / 开发者们"
               name="dev"
               icon="code"
+              :ripple="false"
               style="font-family: 'Josefin Sans', sans-serif; font-weight: 300"
             />
             <q-tab
@@ -26,6 +27,7 @@
               label="contributers / 贡献者们 "
               name="contri"
               icon="archive"
+              :ripple="false"
               style="font-family: 'Josefin Sans', sans-serif; font-weight: 300"
             />
           </q-tabs>

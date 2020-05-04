@@ -9,7 +9,7 @@
         </q-item-section>
       </div>
       <div class="col">
-        <span id="title" class="text-h6 text-black">{{info.name}}</span>
+        <span id="title" class="text-h6 text-grey-8">{{info.name}}</span>
         <q-space />
         <span id="subtitle" class="text-caption text-grey-14">Since {{info.date}}</span>
       </div>
