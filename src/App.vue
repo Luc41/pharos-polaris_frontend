@@ -3,7 +3,7 @@
     <q-header class="bg-transparent text-white" v-show="this.$route.name !== '404'">
       <q-toolbar>
         <q-toolbar-title id="title" class="non-selectable">Pharos-Polaris</q-toolbar-title>
-        <q-tabs align="right">
+        <q-tabs align="right" style="font-family: 'Josefin Sans', sans-serif; font-weight: 300">
           <q-route-tab to="/" label="home" :ripple="false" />
           <q-route-tab to="/sites" label="sites" :ripple="false" />
           <q-route-tab to="/about" label="about" :ripple="false" />
@@ -30,7 +30,12 @@
         <router-view />
       </transition>
 
-      <q-page-sticky position="bottom-right" :offset="fabPos" v-show="this.$route.name !== '404'">
+      <q-page-sticky
+        position="bottom-right"
+        :offset="fabPos"
+        style="font-family: 'Josefin Sans', sans-serif; font-weight: 300"
+        v-show="this.$route.name !== '404'"
+      >
         <q-fab
           class="no-shadow"
           v-model="fabMain"
@@ -108,21 +113,21 @@ export default {
 
 <style>
 /*webfonts*/
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap");
 
 /*font weight */
 #title {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
 }
 
 #subtitle {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
 }
 
 span {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
 }
 

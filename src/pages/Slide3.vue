@@ -8,7 +8,7 @@
       </transition>
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="margin-top: 2em; transition-delay:.2s;">
-          <span id="subtitle" class="text-h4 non-selectable">关于本网站</span>
+          <span id="subtitle" class="text-h4 non-selectable">关于本站</span>
         </div>
       </transition>
     </div>
