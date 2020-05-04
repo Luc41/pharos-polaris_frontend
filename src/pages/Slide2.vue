@@ -13,10 +13,9 @@
       </transition>
       <transition name="slide" mode="out-in" appear>
         <div class="col" style="margin-top: 2em; transition-delay:.4s;">
-          <div class="row">
-            <div class="col-2" />
-            <div class="col q-ma-md">
-              <q-card id="card" class="bg-grey-14">
+          <div class="row justify-center q-mx-xl">
+            <div class="col col-md-4">
+              <q-card id="card" class="bg-grey-14 q-mx-sm">
                 <q-img
                   id="img"
                   alt="forum thumbnail"
@@ -40,8 +39,8 @@
                 </q-img>
               </q-card>
             </div>
-            <div class="col q-ma-md">
-              <q-card id="card" class="bg-grey-14">
+            <div class="col col-md-4">
+              <q-card id="card" class="bg-grey-14 q-mx-sm">
                 <q-img
                   id="img"
                   alt="wiki thumbnail"
@@ -65,7 +64,6 @@
                 </q-img>
               </q-card>
             </div>
-            <div class="col-2" />
           </div>
         </div>
       </transition>
