@@ -104,7 +104,7 @@ export default {
 
 <style lang="scss" scope>
 #card #img {
-  min-height: 300px;
+  min-height: 360px;
 }
 
 /* Icon Wobble Horizontal */
