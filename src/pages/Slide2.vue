@@ -3,12 +3,12 @@
     <div class="q-pa-md column">
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="margin-top: 5em;">
-          <span class="text-h1 text-weight-bold non-selectable">SITES</span>
+          <span id="title" class="text-h1 text-weight-bold non-selectable">SITES</span>
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="margin-top: 1em; transition-delay:.2s;">
-          <span class="text-h4 non-selectable">欢迎访问我们的站点</span>
+          <span id="subtitle" class="text-h4 non-selectable">欢迎访问我们的站点</span>
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
@@ -23,13 +23,13 @@
                   spinner-color="white"
                 >
                   <div class="absolute-bottom text-right">
-                    <span class="text-h5">FORUM</span>
+                    <span class="text-h4">FORUM</span>
                   </div>
                 </q-img>
                 <q-card-section>
                   <div class="row">
                     <div class="col">
-                      <span class="text-subtitle">something in here</span>
+                      <span class="text-body">something in here</span>
                     </div>
                     <div class="col-auto">
                       <a href="https://forum.pharos-polaris.com" target="_blank">
@@ -54,13 +54,13 @@
                   spinner-color="white"
                 >
                   <div class="absolute-bottom text-right">
-                    <span class="text-h5">WIKI</span>
+                    <span class="text-h4">WIKI</span>
                   </div>
                 </q-img>
                 <q-card-section>
                   <div class="row">
                     <div class="col">
-                      <span class="text-subtitle">something in here</span>
+                      <span class="text-body">something in here</span>
                     </div>
                     <div class="col-auto">
                       <a href="https://wiki.pharos-polaris.com" target="_blank">
@@ -114,8 +114,6 @@ export default {
 };
 </script>
 
-<style scope>
-span {
-  color: aliceblue;
-}
+<style lang="sass" scope>
+
 </style>
