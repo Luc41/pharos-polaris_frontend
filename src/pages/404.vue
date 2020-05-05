@@ -40,12 +40,14 @@ export default {
 };
 </script>
 
-<style lang="sass" scoped>
-#img404 
-  min-height: 300px
-  min-width: 300px
-  position: relative
-.col
-  margin: 1em 0 1em 0
+<style lang="scss" scoped>
+#img404 {
+  min-height: 300px;
+  min-width: 300px;
+  position: relative;
+}
+.col {
+  margin: 1em 0 1em 0;
+}
 
 </style>

@@ -10,7 +10,7 @@
         <div class="col self-center" style="transition-delay:.2s; margin-top: 1em;">
           <span id="title" class="text-h1 text-weight-bold non-selectable">Pharos-Polaris.com</span>
         </div>
-      </transition>      
+      </transition>
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="transition-delay:.4s;">
           <img class="q-ma-xl" id="logo" alt="main logo" src="../assets/logo-v2.png" />
@@ -41,8 +41,23 @@ export default {
 };
 </script>
 
-<style lang="sass" scope>
-#logo
-  max-width: 300px
-  max-height: 300px
+<style lang="scss" scope>
+#logo {
+  max-width: 300px;
+  max-height: 300px;
+  /*set image mask*/
+  /*mask-image: url(../assets/logo-v2.png);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 100%, 100%;*/
+}
+
+/*set dom mask*/
+/*#title {
+  /*linear geadient mask*//*
+  background-image: linear-gradient(#c44a6e, #ffa33a);
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
+}*/
 </style>
