@@ -1,8 +1,28 @@
 <template>
   <q-layout view="hHh lpR fFf">
+    <!--particle background, ref:https://github.com/creotip/vue-particles -->
+    <vue-particles
+      class="particle"
+      color="#dedede"
+      :particleOpacity="0.7"
+      :particlesNumber="150"
+      shapeType="circle"
+      :particleSize="4"
+      linesColor="#dedede"
+      :linesWidth="1"
+      :lineLinked="true"
+      :lineOpacity="0.4"
+      :linesDistance="150"
+      :moveSpeed="1"
+      :hoverEffect="false"
+      hoverMode="grab"
+      :clickEffect="false"
+      clickMode="push"
+    />
+
     <q-header class="bg-transparent text-white" v-show="this.$route.name !== '404'">
       <q-toolbar>
-        <q-toolbar-title id="title" class="non-selectable q-mx-md">Pharos-Polaris</q-toolbar-title>
+        <q-toolbar-title id="title" class="non-selectable q-mx-sm">Pharos-Polaris</q-toolbar-title>
         <q-tabs align="right" style="font-family: 'Josefin Sans', sans-serif; font-weight: 300">
           <q-route-tab to="/" label="home" :ripple="false" />
           <q-route-tab to="/sites" label="sites" :ripple="false" />
@@ -12,7 +32,7 @@
       </q-toolbar>
     </q-header>
 
-    <q-footer class="bg-transparent text-grey-13" reveal v-show="this.$route.name !== '404'">
+    <q-footer class="bg-transparent text-grey-4" reveal v-show="this.$route.name !== '404'">
       <q-toolbar id="subtitle">
         <q-toolbar-title class="text-caption text-left">
           Powered by
@@ -39,7 +59,7 @@
         <q-fab
           class="no-shadow"
           v-model="fabMain"
-          color="grey-14"
+          color="orange-9"
           icon="keyboard_arrow_up"
           direction="up"
           vertical-actions-align="right"
@@ -111,7 +131,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 /*webfonts*/
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap");
 
@@ -133,7 +153,7 @@ span {
 
 /*fonts color*/
 span {
-  color: aliceblue;
+  color: rgb(255, 255, 255);
 }
 
 /*background style*/
@@ -146,14 +166,15 @@ body {
   padding: 0;
   height: 100%;
   background-color: #434343;
-  background-image: linear-gradient(#434343, #282828);
+  background-image: linear-gradient(30deg,#0083b3,#000727);
 }
+/*
 #content {
   background-color: transparent;
   background-image: linear-gradient(
       0deg,
       transparent 24%,
-      rgba(255, 255, 255, 0.05) 25%,
+      rgba(255, 255, 255, 0.05) 25%,`
       rgba(255, 255, 255, 0.05) 26%,
       transparent 27%,
       transparent 74%,
@@ -177,11 +198,20 @@ body {
   height: 100%;
   background-size: 50px 50px;
 }
+*/
+
+/*particle position*/
+.particle {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
 
 /*link style*/
 a {
   text-decoration: none;
-  color: #ffc12d;
+  color: #EF6C00;
 }
 
 /*transtion*/

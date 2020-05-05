@@ -38,9 +38,10 @@ export default {
 };
 </script>
 
-<style lang="sass" scoped>
-.mem-card
-  max-width: 100%
-  max-height: 100%
-  margin-top: 1em
+<style lang="scss" scoped>
+.mem-card {
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 1em;
+}
 </style>

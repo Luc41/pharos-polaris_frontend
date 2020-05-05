@@ -1,6 +1,6 @@
 {
   "name": "pharos-polaris",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -28,6 +28,7 @@
     "postcss-rtl": "^1.2.3",
     "sass-loader": "^8.0.0",
     "vue-cli-plugin-quasar": "^2.0.1",
+    "vue-particles": "^1.0.9",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {

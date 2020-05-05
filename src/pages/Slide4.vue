@@ -105,6 +105,6 @@ export default {
 };
 </script>
 
-<style lang="sass" scope>
+<style lang="scss" scope>
 
 </style>
