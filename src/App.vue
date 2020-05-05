@@ -1,6 +1,6 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <!--particle background, ref:https://github.com/creotip/vue-particles-->
+    <!--particle background, ref:https://github.com/creotip/vue-particles -->
     <vue-particles
       class="particle"
       color="#dedede"
@@ -166,8 +166,9 @@ body {
   padding: 0;
   height: 100%;
   background-color: #434343;
-  background-image: linear-gradient(#434343, #282828);
+  background-image: linear-gradient(45deg,#6dd8ff, #170073);
 }
+/*
 #content {
   background-color: transparent;
   background-image: linear-gradient(
@@ -197,6 +198,7 @@ body {
   height: 100%;
   background-size: 50px 50px;
 }
+*/
 
 /*particle position*/
 .particle {
