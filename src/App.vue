@@ -1,5 +1,25 @@
 <template>
   <q-layout view="hHh lpR fFf">
+    <!--particle background, ref:https://github.com/creotip/vue-particles-->
+    <vue-particles
+      class="particle"
+      color="#dedede"
+      :particleOpacity="0.7"
+      :particlesNumber="150"
+      shapeType="circle"
+      :particleSize="4"
+      linesColor="#dedede"
+      :linesWidth="1"
+      :lineLinked="true"
+      :lineOpacity="0.4"
+      :linesDistance="150"
+      :moveSpeed="1"
+      :hoverEffect="false"
+      hoverMode="grab"
+      :clickEffect="false"
+      clickMode="push"
+    />
+
     <q-header class="bg-transparent text-white" v-show="this.$route.name !== '404'">
       <q-toolbar>
         <q-toolbar-title id="title" class="non-selectable q-mx-sm">Pharos-Polaris</q-toolbar-title>
@@ -176,6 +196,14 @@ body {
     );
   height: 100%;
   background-size: 50px 50px;
+}
+
+/*particle position*/
+.particle {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
 }
 
 /*link style*/

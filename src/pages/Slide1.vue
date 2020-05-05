@@ -17,6 +17,8 @@
         </div>
       </transition>
     </div>
+
+    <!--stickt button-->
     <q-page-sticky position="bottom" :offset="dn_fabPos_1">
       <transition name="fade" mode="out-in" appear>
         <div class="col self-center" style="transition-delay:.6s;">
@@ -54,7 +56,7 @@ export default {
 
 /*set dom mask*/
 /*#title {
-  /*linear geadient mask*//*
+  /*linear geadient mask*/ /*
   background-image: linear-gradient(#c44a6e, #ffa33a);
   background-size: cover;
   background-clip: text;
