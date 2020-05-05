@@ -166,7 +166,7 @@ body {
   padding: 0;
   height: 100%;
   background-color: #434343;
-  background-image: linear-gradient(30deg,#0083b3,#000727);
+  background-image: linear-gradient(30deg,#434343,#000727);
 }
 /*
 #content {
