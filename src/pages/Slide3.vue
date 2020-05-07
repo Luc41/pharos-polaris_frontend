@@ -15,16 +15,16 @@
         <div class="col q-px-xl" style="margin-top: 2em; transition-delay: .4s">
           <div class="row justify-center">
             <div class="col col-md-8">
-              <q-splitter v-model="splitter" unit="px">
+              <q-splitter v-model="splitterModel">
                 <template v-slot:before>
                   <q-tab-panels
-                    v-model="slide"
+                    v-model="slidePanel"
                     animated
                     swipeable
                     vertical
                     transition-prev="jump-up"
                     transition-next="jump-down"
-                    class="titlePanel bg-primary"
+                    class="bg-primary"
                   >
                     <q-tab-panel :name="1">
                       <span class="text-h4 q-mx-sm">Test Title 1</span>
@@ -44,13 +44,13 @@
                     </q-tab-panel>
                   </q-tab-panels>
                   <q-tab-panels
-                    v-model="slide"
+                    v-model="slidePanel"
                     animated
                     swipeable
                     vertical
                     transition-prev="jump-up"
                     transition-next="jump-down"
-                    class="contentPanel bg-secondary"
+                    class="bg-secondary"
                   >
                     <q-tab-panel :name="1">
                       <span class="text-h5 q-mx-sm">测试文本1测试文本1测试文本1测试文本1测试文本1</span>
@@ -73,7 +73,7 @@
                 <template v-slot:after>
                   <q-carousel
                     animated
-                    v-model="slide"
+                    v-model="slidePanel"
                     navigation
                     infinite
                     :autoplay="10000"
@@ -112,15 +112,13 @@ export default {
   data() {
     return {
       dn_fabPos_3: [0, 30],
-      slide: 1,
-      splitterModel: 300
+      slidePanel: 1,
+      splitterModel: 40
     };
   }
 };
 </script>
 
 <style lang="scss" scope>
-.contentPanel {
-  max-width: fit-content;
-}
+
 </style>
