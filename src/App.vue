@@ -69,7 +69,7 @@
           <q-fab-action
             class="no-shadow"
             label-position="left"
-            color="grey-14"
+            color="orange-9"
             icon="contact_support"
             label="CONTACT US"
             to="/contact"
@@ -78,7 +78,7 @@
           <q-fab-action
             class="no-shadow"
             label-position="left"
-            color="grey-14"
+            color="orange-9"
             icon="info"
             label="ABOUT"
             to="/about"
@@ -87,7 +87,7 @@
           <q-fab-action
             class="no-shadow"
             label-position="left"
-            color="grey-14"
+            color="orange-9"
             icon="web"
             label="SITES"
             to="/sites"
@@ -96,7 +96,7 @@
           <q-fab-action
             class="no-shadow"
             label-position="left"
-            color="grey-14"
+            color="orange-9"
             icon="home"
             label="HOME"
             to="/"
@@ -128,6 +128,9 @@ export default {
       this.fabPos = [this.fabPos[0] - ev.delta.x, this.fabPos[1] - ev.delta.y];
     }
   }
+  //mounted() {
+  //  window.addEventListener("mousewheel", this.handleScroll, false);
+  //}
 };
 </script>
 
@@ -166,7 +169,7 @@ body {
   padding: 0;
   height: 100%;
   background-color: #434343;
-  background-image: linear-gradient(30deg,#0083b3,#000727);
+  background-image: linear-gradient(30deg, #434343, #000727);
 }
 /*
 #content {
@@ -211,7 +214,7 @@ body {
 /*link style*/
 a {
   text-decoration: none;
-  color: #EF6C00;
+  color: #ef6c00;
 }
 
 /*transtion*/

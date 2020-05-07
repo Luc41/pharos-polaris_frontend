@@ -1,14 +1,14 @@
 <template>
   <q-page class="q-pa-md">
-    <div class="q-pa-md column">
+    <div class="q-pa-md column" style="margin-top: 5em;">
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center">
-          <span id="title" class="text-h1 text-weight-bold non-selectable">ERROR：404!</span>
+          <span id="title" class="text-h2 text-uppercase">error:page not found!</span>
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="transition-delay: .2s;">
-          <span id="subtitle" class="text-h4 non-selectable">您访问的页面不存在，请检查URL后再试</span>
+          <span id="subtitle" class="text-h4">您访问的页面不存在，请检查URL后再试</span>
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
@@ -49,5 +49,4 @@ export default {
 .col {
   margin: 1em 0 1em 0;
 }
-
 </style>
