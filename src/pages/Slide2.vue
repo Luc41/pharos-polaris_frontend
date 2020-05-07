@@ -7,7 +7,7 @@
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
-        <div class="col self-center" style="margin-top: 1em; transition-delay:.2s;">
+        <div class="col self-center" style="margin-top: 2em; transition-delay:.2s;">
           <span id="subtitle" class="text-h4 non-selectable">欢迎访问我们的站点</span>
         </div>
       </transition>

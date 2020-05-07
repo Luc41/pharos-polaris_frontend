@@ -27,20 +27,16 @@
                     class="bg-primary"
                   >
                     <q-tab-panel :name="1">
-                      <span class="text-h4 q-mx-sm">Test Title 1</span>
-                      <span class="text-h4 q-mx-sm">测试标题 1</span>
+                      <span class="text-h4 q-mx-sm">{{title_1}}</span>
                     </q-tab-panel>
                     <q-tab-panel :name="2">
-                      <span class="text-h4 q-mx-sm">Test Title 2</span>
-                      <span class="text-h4 q-mx-sm">测试标题 2</span>
+                      <span class="text-h4 q-mx-sm">{{title_2}}</span>
                     </q-tab-panel>
                     <q-tab-panel :name="3">
-                      <span class="text-h4 q-mx-sm">Test Title 3</span>
-                      <span class="text-h4 q-mx-sm">测试标题 3</span>
+                      <span class="text-h4 q-mx-sm">{{title_3}}</span>
                     </q-tab-panel>
                     <q-tab-panel :name="4">
-                      <span class="text-h4 q-mx-sm">Test Title 4</span>
-                      <span class="text-h4 q-mx-sm">测试标题 4</span>
+                      <span class="text-h4 q-mx-sm">{{title_4}}</span>
                     </q-tab-panel>
                   </q-tab-panels>
                   <q-tab-panels
@@ -53,20 +49,16 @@
                     class="bg-secondary"
                   >
                     <q-tab-panel :name="1">
-                      <span class="text-h5 q-mx-sm">测试文本1测试文本1测试文本1测试文本1测试文本1</span>
+                      <span class="text-h5 q-mx-sm">{{content_1}}</span>
                     </q-tab-panel>
                     <q-tab-panel :name="2">
-                      <span
-                        class="text-h5 q-mx-sm"
-                      >测试文本2测试文本2测试文本2测试文本2测试文本2测试文本2测试文本2测试文本2测试文本2测试文本2测试文本2测试文本2</span>
+                      <span class="text-h5 q-mx-sm">{{content_2}}</span>
                     </q-tab-panel>
                     <q-tab-panel :name="3">
-                      <span
-                        class="text-h5 q-mx-sm"
-                      >测试文本1测试文本1测试文本1测试文本1测试文本1测试文本1测试文本1测试文本1测试文本1测试文本1测试文本1测试文本1测试文本1测试文本1测试文本1</span>
+                      <span class="text-h5 q-mx-sm">{{content_3}}</span>
                     </q-tab-panel>
                     <q-tab-panel :name="4">
-                      <span class="text-h5 q-mx-sm">测试文本1测试文本1测试文本1测试文本1测试文本1</span>
+                      <span class="text-h5 q-mx-sm">{{content_4}}</span>
                     </q-tab-panel>
                   </q-tab-panels>
                 </template>
@@ -113,12 +105,19 @@ export default {
     return {
       dn_fabPos_3: [0, 30],
       slidePanel: 1,
-      splitterModel: 40
+      splitterModel: 40,
+      title_1: "测试标题1",
+      title_2: "测试标题2",
+      title_3: "测试标题3",
+      title_4: "测试标题4",
+      content_1: "测试文本1",
+      content_2: "测试文本2",
+      content_3: "测试文本3",
+      content_4: "测试文本4"
     };
   }
 };
 </script>
 
 <style lang="scss" scope>
-
 </style>
