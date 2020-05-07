@@ -3,7 +3,7 @@
     <div class="q-pa-md column">
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="margin-top: 5em;">
-          <span id="title" class="text-h1 text-weight-bold non-selectable">SITES</span>
+          <span id="title" class="text-h1 non-selectable text-uppercase">sites</span>
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
@@ -23,15 +23,15 @@
                   spinner-color="white"
                 >
                   <div class="absolute-bottom text-right">
-                    <span class="text-h5">Why don't you talk to me</span>
+                    <span class="text-h5 text-capitalize">why don't you talk to me</span>
                     <q-space />
                     <span class="text-h4">
                       <a
-                        class="hvr-icon-wobble-horizontal"
+                        class="hvr-icon-wobble-horizontal text-uppercase"
                         href="https://forum.pharos-polaris.com"
                         target="_blank"
                       >
-                        FORUM
+                        forum
                         <q-icon class="hvr-icon" name="navigate_next" style="margin-top: -.2em;" />
                       </a>
                     </span>
@@ -48,15 +48,15 @@
                   spinner-color="white"
                 >
                   <div class="absolute-bottom text-right">
-                    <span class="text-h5">May the crystal guides you.</span>
+                    <span class="text-h5 text-capitalize">may the crystal guides you.</span>
                     <q-space />
                     <span class="text-h4">
                       <a
-                        class="hvr-icon-wobble-horizontal"
+                        class="hvr-icon-wobble-horizontal text-uppercase"
                         href="https://wiki.pharos-polaris.com"
                         target="_blank"
                       >
-                        WIKI
+                        wiki
                         <q-icon class="hvr-icon" name="navigate_next" style="margin-top: -.2em;" />
                       </a>
                     </span>

@@ -3,7 +3,7 @@
     <div class="q-pa-md column">
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="margin-top: 5em;">
-          <span id="title" class="text-h1 text-weight-bold non-selectable">ABOUT</span>
+          <span id="title" class="text-h1 non-selectable text-uppercase">about</span>
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>

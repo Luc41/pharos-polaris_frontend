@@ -3,7 +3,7 @@
     <div class="q-pa-md column">
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center" style="margin-top: 5em;">
-          <span id="title" class="text-h1 text-weight-bold non-selectable">CONTACT US</span>
+          <span id="title" class="text-h1 non-selectable text-uppercase">contact us</span>
         </div>
       </transition>
       <transition name="slide" mode="out-in" appear>
