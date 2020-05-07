@@ -128,6 +128,9 @@ export default {
       this.fabPos = [this.fabPos[0] - ev.delta.x, this.fabPos[1] - ev.delta.y];
     }
   }
+  //mounted() {
+  //  window.addEventListener("mousewheel", this.handleScroll, false);
+  //}
 };
 </script>
 
@@ -166,7 +169,7 @@ body {
   padding: 0;
   height: 100%;
   background-color: #434343;
-  background-image: linear-gradient(30deg,#434343,#000727);
+  background-image: linear-gradient(30deg, #434343, #000727);
 }
 /*
 #content {
@@ -211,7 +214,7 @@ body {
 /*link style*/
 a {
   text-decoration: none;
-  color: #EF6C00;
+  color: #ef6c00;
 }
 
 /*transtion*/

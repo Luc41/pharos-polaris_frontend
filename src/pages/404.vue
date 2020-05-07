@@ -1,6 +1,6 @@
 <template>
   <q-page class="q-pa-md">
-    <div class="q-pa-md column">
+    <div class="q-pa-md column" style="margin-top: 5em;">
       <transition name="slide" mode="out-in" appear>
         <div class="col self-center">
           <span id="title" class="text-h2 text-weight-bold">ERROR:PAGE NOT FOUND</span>
