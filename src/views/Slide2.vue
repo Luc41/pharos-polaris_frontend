@@ -1,21 +1,51 @@
 <template>
   <q-page class="flex-center">
     <div class="q-pa-md column">
-      <transition name="slide" mode="out-in" appear>
-        <div class="col self-center" style="margin-top: 5em;">
-          <span id="title" class="text-h1 non-selectable text-uppercase">sites</span>
+      <transition
+        name="slide"
+        mode="out-in"
+        appear
+      >
+        <div
+          class="col self-center"
+          style="margin-top: 5em;"
+        >
+          <span
+            id="title"
+            class="text-h1 non-selectable text-uppercase"
+          >sites</span>
         </div>
       </transition>
-      <transition name="slide" mode="out-in" appear>
-        <div class="col self-center" style="margin-top: 2em; transition-delay:.2s;">
-          <span id="subtitle" class="text-h4 non-selectable">欢迎访问我们的站点</span>
+      <transition
+        name="slide"
+        mode="out-in"
+        appear
+      >
+        <div
+          class="col self-center"
+          style="margin-top: 2em; transition-delay:.2s;"
+        >
+          <span
+            id="subtitle"
+            class="text-h4 non-selectable"
+          >欢迎访问我们的站点</span>
         </div>
       </transition>
-      <transition name="slide" mode="out-in" appear>
-        <div class="col" style="margin-top: 2em; transition-delay:.4s;">
+      <transition
+        name="slide"
+        mode="out-in"
+        appear
+      >
+        <div
+          class="col"
+          style="margin-top: 2em; transition-delay:.4s;"
+        >
           <div class="row justify-center q-mx-xl">
             <div class="col col-md-4">
-              <q-card id="card" class="bg-grey-14 q-mx-sm">
+              <q-card
+                id="card"
+                class="bg-grey-14 q-mx-sm"
+              >
                 <q-img
                   id="img"
                   alt="forum thumbnail"
@@ -32,7 +62,11 @@
                         target="_blank"
                       >
                         forum
-                        <q-icon class="hvr-icon" name="navigate_next" style="margin-top: -.2em;" />
+                        <q-icon
+                          class="hvr-icon"
+                          name="navigate_next"
+                          style="margin-top: -.2em;"
+                        />
                       </a>
                     </span>
                   </div>
@@ -40,7 +74,10 @@
               </q-card>
             </div>
             <div class="col col-md-4">
-              <q-card id="card" class="bg-grey-14 q-mx-sm">
+              <q-card
+                id="card"
+                class="bg-grey-14 q-mx-sm"
+              >
                 <q-img
                   id="img"
                   alt="wiki thumbnail"
@@ -57,7 +94,11 @@
                         target="_blank"
                       >
                         wiki
-                        <q-icon class="hvr-icon" name="navigate_next" style="margin-top: -.2em;" />
+                        <q-icon
+                          class="hvr-icon"
+                          name="navigate_next"
+                          style="margin-top: -.2em;"
+                        />
                       </a>
                     </span>
                   </div>
@@ -73,12 +114,37 @@
       </div>
       -->
     </div>
-    <q-page-sticky position="bottom" :offset="dn_fabPos_2">
-      <transition name="fade" mode="out-in" appear>
-        <div class="col self-center" style="transition-delay:.6s;">
-          <q-btn-group flat rounded>
-            <q-btn icon="keyboard_arrow_up" size="lg" color="white" flat to="/" />
-            <q-btn icon="keyboard_arrow_down" size="lg" color="white" flat to="/about" />
+    <q-page-sticky
+      position="bottom"
+      :offset="dn_fabPos_2"
+    >
+      <transition
+        name="fade"
+        mode="out-in"
+        appear
+      >
+        <div
+          class="col self-center"
+          style="transition-delay:.6s;"
+        >
+          <q-btn-group
+            flat
+            rounded
+          >
+            <q-btn
+              icon="keyboard_arrow_up"
+              size="lg"
+              color="white"
+              flat
+              to="/"
+            />
+            <q-btn
+              icon="keyboard_arrow_down"
+              size="lg"
+              color="white"
+              flat
+              to="/about"
+            />
           </q-btn-group>
         </div>
       </transition>
@@ -88,16 +154,16 @@
 
 <script>
 export default {
-  name: "Slide2",
+  name: 'Slide2',
 
-  data() {
+  data () {
     return {
       dn_fabPos_2: [0, 30]
-    };
+    }
   },
 
   methods: {}
-};
+}
 </script>
 
 <style lang="scss" scope>
