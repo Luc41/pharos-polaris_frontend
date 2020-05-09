@@ -4,49 +4,92 @@
     <vue-particles
       class="particle"
       color="#dedede"
-      :particleOpacity="0.7"
-      :particlesNumber="150"
-      shapeType="circle"
-      :particleSize="4"
-      linesColor="#dedede"
-      :linesWidth="1"
-      :lineLinked="true"
-      :lineOpacity="0.4"
-      :linesDistance="150"
-      :moveSpeed="1"
-      :hoverEffect="false"
-      hoverMode="grab"
-      :clickEffect="false"
-      clickMode="push"
+      :particle-opacity="0.7"
+      :particles-number="150"
+      shape-type="circle"
+      :particle-size="4"
+      lines-color="#dedede"
+      :lines-width="1"
+      :line-linked="true"
+      :line-opacity="0.4"
+      :lines-distance="150"
+      :move-speed="1"
+      :hover-effect="false"
+      hover-mode="grab"
+      :click-effect="false"
+      click-mode="push"
     />
 
-    <q-header class="bg-transparent text-white" v-show="this.$route.name !== '404'">
+    <q-header
+      class="bg-transparent text-white"
+      v-show="this.$route.name !== '404'"
+    >
       <q-toolbar>
-        <q-toolbar-title id="title" class="non-selectable q-mx-sm">Pharos-Polaris</q-toolbar-title>
-        <q-tabs align="right" style="font-family: 'Josefin Sans', sans-serif; font-weight: 300">
-          <q-route-tab to="/" label="home" :ripple="false" />
-          <q-route-tab to="/sites" label="sites" :ripple="false" />
-          <q-route-tab to="/about" label="about" :ripple="false" />
-          <q-route-tab to="/contact" label="contact us" :ripple="false" />
+        <q-toolbar-title
+          id="title"
+          class="non-selectable q-mx-sm"
+        >
+          Pharos-Polaris
+        </q-toolbar-title>
+        <q-tabs
+          align="right"
+          style="font-family: 'Josefin Sans', sans-serif; font-weight: 300"
+        >
+          <q-route-tab
+            to="/"
+            label="home"
+            :ripple="false"
+          />
+          <q-route-tab
+            to="/sites"
+            label="sites"
+            :ripple="false"
+          />
+          <q-route-tab
+            to="/about"
+            label="about"
+            :ripple="false"
+          />
+          <q-route-tab
+            to="/contact"
+            label="contact us"
+            :ripple="false"
+          />
         </q-tabs>
       </q-toolbar>
     </q-header>
 
-    <q-footer class="bg-transparent text-grey-4" reveal v-show="this.$route.name !== '404'">
+    <q-footer
+      class="bg-transparent text-grey-4"
+      reveal
+      v-show="this.$route.name !== '404'"
+    >
       <q-toolbar id="subtitle">
         <q-toolbar-title class="text-caption text-left">
           Powered by
-          <a href="https://cn.vuejs.org/" target="_blank">Vue.js</a> and
-          <a href="https://quasar.dev/" target="_blank">Quasar</a>
+          <a
+            href="https://cn.vuejs.org/"
+            target="_blank"
+          >Vue.js</a> and
+          <a
+            href="https://quasar.dev/"
+            target="_blank"
+          >Quasar</a>
         </q-toolbar-title>
         <q-toolbar-title
           class="text-caption text-right"
-        >&copy;2020 Pharos-Polaris.com All Rights Reserved.</q-toolbar-title>
+        >
+          &copy;2020 Pharos-Polaris.com All Rights Reserved.
+        </q-toolbar-title>
       </q-toolbar>
     </q-footer>
 
     <q-page-container id="content">
-      <transition name="Rfade" mode="out-in" appear>
+      <transition
+        name="Rfade"
+        mode="out-in"
+        appear
+      >
         <router-view />
       </transition>
 
@@ -110,28 +153,28 @@
 
 <script>
 export default {
-  name: "App",
+  name: 'App',
 
   components: {},
 
-  data() {
+  data () {
     return {
       fabMain: false,
       fabPos: [50, 100],
       draggingFab: false
-    };
+    }
   },
   methods: {
-    moveFab(ev) {
-      this.draggingFab = ev.isFirst !== true && ev.isFinal !== true;
+    moveFab (ev) {
+      this.draggingFab = ev.isFirst !== true && ev.isFinal !== true
 
-      this.fabPos = [this.fabPos[0] - ev.delta.x, this.fabPos[1] - ev.delta.y];
+      this.fabPos = [this.fabPos[0] - ev.delta.x, this.fabPos[1] - ev.delta.y]
     }
   }
-  //mounted() {
+  // mounted() {
   //  window.addEventListener("mousewheel", this.handleScroll, false);
-  //}
-};
+  // }
+}
 </script>
 
 <style lang="scss">

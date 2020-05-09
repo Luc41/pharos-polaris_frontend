@@ -1,0 +1,187 @@
+<template>
+  <q-page class="flex-center">
+    <div class="q-pa-md column">
+      <transition
+        name="slide"
+        mode="out-in"
+        appear
+      >
+        <div
+          class="col self-center"
+          style="margin-top: 5em;"
+        >
+          <span
+            id="title"
+            class="text-h1 non-selectable text-uppercase"
+          >about</span>
+        </div>
+      </transition>
+      <transition
+        name="slide"
+        mode="out-in"
+        appear
+      >
+        <div
+          class="col self-center"
+          style="margin-top: 2em; transition-delay:.2s;"
+        >
+          <span
+            id="subtitle"
+            class="text-h4 non-selectable"
+          >关于本站</span>
+        </div>
+      </transition>
+      <transition
+        name="slide"
+        mode="out-in"
+        appear
+      >
+        <div
+          class="col q-px-xl"
+          style="margin-top: 2em; transition-delay: .4s"
+        >
+          <div class="row justify-center">
+            <div class="col col-md-8">
+              <q-splitter v-model="splitterModel">
+                <template v-slot:before>
+                  <q-tab-panels
+                    v-model="slidePanel"
+                    animated
+                    swipeable
+                    vertical
+                    transition-prev="jump-up"
+                    transition-next="jump-down"
+                    class="bg-primary"
+                  >
+                    <q-tab-panel :name="1">
+                      <span class="text-h4 q-mx-sm">{{ title_1 }}</span>
+                    </q-tab-panel>
+                    <q-tab-panel :name="2">
+                      <span class="text-h4 q-mx-sm">{{ title_2 }}</span>
+                    </q-tab-panel>
+                    <q-tab-panel :name="3">
+                      <span class="text-h4 q-mx-sm">{{ title_3 }}</span>
+                    </q-tab-panel>
+                    <q-tab-panel :name="4">
+                      <span class="text-h4 q-mx-sm">{{ title_4 }}</span>
+                    </q-tab-panel>
+                  </q-tab-panels>
+                  <q-tab-panels
+                    v-model="slidePanel"
+                    animated
+                    swipeable
+                    vertical
+                    transition-prev="jump-up"
+                    transition-next="jump-down"
+                    class="bg-secondary"
+                  >
+                    <q-tab-panel :name="1">
+                      <span class="text-h5 q-mx-sm">{{ content_1 }}</span>
+                    </q-tab-panel>
+                    <q-tab-panel :name="2">
+                      <span class="text-h5 q-mx-sm">{{ content_2 }}</span>
+                    </q-tab-panel>
+                    <q-tab-panel :name="3">
+                      <span class="text-h5 q-mx-sm">{{ content_3 }}</span>
+                    </q-tab-panel>
+                    <q-tab-panel :name="4">
+                      <span class="text-h5 q-mx-sm">{{ content_4 }}</span>
+                    </q-tab-panel>
+                  </q-tab-panels>
+                </template>
+                <template v-slot:after>
+                  <q-carousel
+                    animated
+                    v-model="slidePanel"
+                    navigation
+                    infinite
+                    :autoplay="10000"
+                    padding
+                    transition-next="slide-right"
+                    transition-prev="slide-left"
+                  >
+                    <q-carousel-slide
+                      :name="1"
+                      img-src="https://cdn.quasar.dev/img/mountains.jpg"
+                    />
+                    <q-carousel-slide
+                      :name="2"
+                      img-src="https://cdn.quasar.dev/img/parallax1.jpg"
+                    />
+                    <q-carousel-slide
+                      :name="3"
+                      img-src="https://cdn.quasar.dev/img/parallax2.jpg"
+                    />
+                    <q-carousel-slide
+                      :name="4"
+                      img-src="https://cdn.quasar.dev/img/quasar.jpg"
+                    />
+                  </q-carousel>
+                </template>
+              </q-splitter>
+            </div>
+          </div>
+        </div>
+      </transition>
+    </div>
+    <q-page-sticky
+      position="bottom"
+      :offset="dn_fabPos_3"
+    >
+      <transition
+        name="fade"
+        mode="out-in"
+        appear
+      >
+        <div
+          class="col self-center"
+          style="transition-delay:.6s;"
+        >
+          <q-btn-group
+            flat
+            rounded
+          >
+            <q-btn
+              icon="keyboard_arrow_up"
+              size="lg"
+              color="white"
+              flat
+              to="/sites"
+            />
+            <q-btn
+              icon="keyboard_arrow_down"
+              size="lg"
+              color="white"
+              flat
+              to="/contact"
+            />
+          </q-btn-group>
+        </div>
+      </transition>
+    </q-page-sticky>
+  </q-page>
+</template>
+
+<script>
+export default {
+  name: 'Slide3',
+  data () {
+    return {
+      dn_fabPos_3: [0, 30],
+      slidePanel: 1,
+      splitterModel: 40,
+      title_1: '测试标题1',
+      title_2: '测试标题2',
+      title_3: '测试标题3',
+      title_4: '测试标题4',
+      content_1: '测试文本1',
+      content_2: '测试文本2',
+      content_3: '测试文本3',
+      content_4: '测试文本4'
+    }
+  }
+}
+</script>
+
+<style lang="scss" scope>
+</style>
