@@ -252,6 +252,8 @@ body {
   width: 100%;
   position: absolute;
   z-index: -1;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
 }
 
 /*link style*/
