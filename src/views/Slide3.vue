@@ -184,4 +184,7 @@ export default {
 </script>
 
 <style lang="scss" scope>
+.q-carousel {
+  border-radius: 10px;
+}
 </style>
