@@ -102,7 +102,7 @@
         <q-fab
           class="no-shadow"
           v-model="fabMain"
-          color="orange-9"
+          color="blue-12"
           icon="keyboard_arrow_up"
           direction="up"
           vertical-actions-align="right"
@@ -112,7 +112,7 @@
           <q-fab-action
             class="no-shadow"
             label-position="left"
-            color="orange-9"
+            color="blue-12"
             icon="contact_support"
             label="CONTACT US"
             to="/contact"
@@ -121,7 +121,7 @@
           <q-fab-action
             class="no-shadow"
             label-position="left"
-            color="orange-9"
+            color="blue-12"
             icon="info"
             label="ABOUT"
             to="/about"
@@ -130,7 +130,7 @@
           <q-fab-action
             class="no-shadow"
             label-position="left"
-            color="orange-9"
+            color="blue-12"
             icon="web"
             label="SITES"
             to="/sites"
@@ -139,7 +139,7 @@
           <q-fab-action
             class="no-shadow"
             label-position="left"
-            color="orange-9"
+            color="blue-12"
             icon="home"
             label="HOME"
             to="/"
@@ -228,7 +228,7 @@ body {
 /*link style*/
 a {
   text-decoration: none;
-  color: #ef6c00;
+  color: #3ea4f7;
 }
 
 /*transtion*/
