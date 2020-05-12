@@ -41,7 +41,7 @@
             class="q-ma-xl"
             id="logo"
             alt="main logo"
-            src="../assets/logo-v3.png"
+            src="../assets/logo-v4.png"
           >
         </div>
       </transition>
