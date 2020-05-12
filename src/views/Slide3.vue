@@ -53,17 +53,17 @@
                     transition-next="jump-down"
                     class="bg-primary"
                   >
+                    <q-tab-panel :name="0">
+                      <span class="text-h4 q-mx-sm">{{ title[0] }}</span>
+                    </q-tab-panel>
                     <q-tab-panel :name="1">
-                      <span class="text-h4 q-mx-sm">{{ title_1 }}</span>
+                      <span class="text-h4 q-mx-sm">{{ title[1] }}</span>
                     </q-tab-panel>
                     <q-tab-panel :name="2">
-                      <span class="text-h4 q-mx-sm">{{ title_2 }}</span>
+                      <span class="text-h4 q-mx-sm">{{ title[2] }}</span>
                     </q-tab-panel>
                     <q-tab-panel :name="3">
-                      <span class="text-h4 q-mx-sm">{{ title_3 }}</span>
-                    </q-tab-panel>
-                    <q-tab-panel :name="4">
-                      <span class="text-h4 q-mx-sm">{{ title_4 }}</span>
+                      <span class="text-h4 q-mx-sm">{{ title[3] }}</span>
                     </q-tab-panel>
                   </q-tab-panels>
                   <q-tab-panels
@@ -75,17 +75,17 @@
                     transition-next="jump-down"
                     class="bg-secondary"
                   >
+                    <q-tab-panel :name="0">
+                      <span class="text-h5 q-mx-sm">{{ content[0] }}</span>
+                    </q-tab-panel>
                     <q-tab-panel :name="1">
-                      <span class="text-h5 q-mx-sm">{{ content_1 }}</span>
+                      <span class="text-h5 q-mx-sm">{{ content[1] }}</span>
                     </q-tab-panel>
                     <q-tab-panel :name="2">
-                      <span class="text-h5 q-mx-sm">{{ content_2 }}</span>
+                      <span class="text-h5 q-mx-sm">{{ content[2] }}</span>
                     </q-tab-panel>
                     <q-tab-panel :name="3">
-                      <span class="text-h5 q-mx-sm">{{ content_3 }}</span>
-                    </q-tab-panel>
-                    <q-tab-panel :name="4">
-                      <span class="text-h5 q-mx-sm">{{ content_4 }}</span>
+                      <span class="text-h5 q-mx-sm">{{ content[3] }}</span>
                     </q-tab-panel>
                   </q-tab-panels>
                 </template>
@@ -101,20 +101,20 @@
                     transition-prev="slide-left"
                   >
                     <q-carousel-slide
+                      :name="0"
+                      :img-src="imgSrc[0]"
+                    />
+                    <q-carousel-slide
                       :name="1"
-                      img-src="https://cdn.quasar.dev/img/mountains.jpg"
+                      :img-src="imgSrc[1]"
                     />
                     <q-carousel-slide
                       :name="2"
-                      img-src="https://cdn.quasar.dev/img/parallax1.jpg"
+                      :img-src="imgSrc[2]"
                     />
                     <q-carousel-slide
                       :name="3"
-                      img-src="https://cdn.quasar.dev/img/parallax2.jpg"
-                    />
-                    <q-carousel-slide
-                      :name="4"
-                      img-src="https://cdn.quasar.dev/img/quasar.jpg"
+                      :img-src="imgSrc[3]"
                     />
                   </q-carousel>
                 </template>
@@ -168,16 +168,26 @@ export default {
   data () {
     return {
       dn_fabPos_3: [0, 30],
-      slidePanel: 1,
+      slidePanel: 0,
       splitterModel: 40,
-      title_1: '测试标题1',
-      title_2: '测试标题2',
-      title_3: '测试标题3',
-      title_4: '测试标题4',
-      content_1: '测试文本1',
-      content_2: '测试文本2',
-      content_3: '测试文本3',
-      content_4: '测试文本4'
+      title: [
+        '测试标题1',
+        '测试标题2',
+        '测试标题3',
+        '测试标题4'
+      ],
+      content: [
+        '测试文本1',
+        '测试文本2',
+        '测试文本3',
+        '测试文本4'
+      ],
+      imgSrc: [
+        'https://cdn.quasar.dev/img/mountains.jpg',
+        'https://cdn.quasar.dev/img/parallax1.jpg',
+        'https://cdn.quasar.dev/img/parallax2.jpg',
+        'https://cdn.quasar.dev/img/quasar.jpg'
+      ]
     }
   }
 }
@@ -185,6 +195,6 @@ export default {
 
 <style lang="scss" scope>
 .q-carousel {
-  border-radius: 10px;
+  border-radius: 5px;
 }
 </style>
