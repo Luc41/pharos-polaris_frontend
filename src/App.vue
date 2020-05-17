@@ -64,8 +64,11 @@
       reveal
       v-show="this.$route.name !== '404'"
     >
-      <q-toolbar id="subtitle">
-        <q-toolbar-title class="text-caption text-left">
+      <q-toolbar>
+        <q-toolbar-title
+          class="text-caption text-left"
+          style="color: #939393;"
+        >
           Powered by
           <a
             href="https://cn.vuejs.org/"
@@ -76,10 +79,24 @@
             target="_blank"
           >Quasar</a>
         </q-toolbar-title>
+
         <q-toolbar-title
           class="text-caption text-right"
+          style="color: #939393;"
         >
           &copy;2020 Pharos-Polaris.com All Rights Reserved.
+          <q-space />
+          <a
+            target="_blank"
+            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=23108402000110"
+            style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"
+          >
+            <img
+              src="./assets/record.png"
+              style="float:left;height:16px;"
+            >
+            <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">黑公网安备 23108402000110号</p>
+          </a>
         </q-toolbar-title>
       </q-toolbar>
     </q-footer>
@@ -187,12 +204,7 @@ export default {
   font-weight: 400;
 }
 
-#subtitle {
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
-}
-
-span {
+#subtitle,footer,span {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
 }
