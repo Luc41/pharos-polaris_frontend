@@ -1,5 +1,8 @@
 <template>
-  <q-item :style="'background-color: ' + cardColorbg + ';'">
+  <q-item
+    :style="'background-color: ' + cardColorbg + ';'"
+    clickable
+  >
     <q-item-section
       avatar
       class="q-my-sm"
@@ -90,13 +93,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.q-card {
-  max-width: 100%;
-  max-height: 100%;
-  margin-top: 1em;
-}
-
-.q-card div div span {
-  color: #d6d6d6;
+.q-item {
+  border-radius: 5px;
 }
 </style>
