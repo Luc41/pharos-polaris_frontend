@@ -1,6 +1,6 @@
 {
   "name": "pharos-polaris",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -12,7 +12,7 @@
     "@quasar/extras": "^1.8.1",
     "core-js": "^3.6.4",
     "md5": "^2.2.1",
-    "quasar": "^1.11.2",
+    "quasar": "^1.11.3",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6"
   },
@@ -23,7 +23,7 @@
     "@vue/cli-plugin-unit-mocha": "~4.3.0",
     "@vue/cli-service": "~4.3.0",
     "@vue/eslint-config-standard": "^5.1.2",
-    "@vue/test-utils": "^1.0.2",
+    "@vue/test-utils": "^1.0.3",
     "babel-eslint": "^10.1.0",
     "babel-plugin-transform-imports": "1.5.0",
     "chai": "^4.1.2",

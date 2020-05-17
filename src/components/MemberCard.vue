@@ -1,47 +1,54 @@
 <template>
-  <q-card :style="'background-color: ' + cardColorbg + ';'">
-    <div class="q-pa-md row items-center">
-      <div class="col col-auto">
-        <q-item-section avatar>
-          <q-avatar
-            color="indigo-6"
-            size="52px"
-            font-size="52px"
-            text-color="white"
-          >
-            <img
-              :src="'https://s.gravatar.com/avatar/' + imageHash"
-              alt="avatar"
-            >
-          </q-avatar>
-        </q-item-section>
-      </div>
-      <div class="col">
-        <span
-          id="title"
-          class="text-h6"
-        >{{ info.name }}</span>
-        <q-space />
-        <span
-          id="subtitle"
-          class="text-caption"
-        >Since {{ info.date }}</span>
-      </div>
-      <div class="col col-auto">
-        <q-card-actions>
-          <a :href="'mailto:' + info.mailaddress">
-            <q-btn
-              flat
-              round
-              size="20px"
-              icon="mail"
-              style="color: #d6d6d6;"
-            />
-          </a>
-        </q-card-actions>
-      </div>
-    </div>
-  </q-card>
+  <q-item
+    :style="'background-color: ' + cardColorbg + ';'"
+    clickable
+  >
+    <q-item-section
+      avatar
+      class="q-my-sm"
+    >
+      <q-avatar
+        color="primary"
+        text-color="white"
+        size="56px"
+      >
+        <img
+          :src="'https://s.gravatar.com/avatar/' + imageHash"
+          alt="avatar"
+        >
+      </q-avatar>
+    </q-item-section>
+
+    <q-item-section>
+      <q-item-label
+        id="title"
+        class="text-white text-h6"
+        lines="1"
+      >
+        {{ info.name }}
+      </q-item-label>
+      <q-item-label
+        id="subtitle"
+        class="text-white"
+        caption
+        lines="1"
+      >
+        Since {{ info.date }}
+      </q-item-label>
+    </q-item-section>
+
+    <q-item-section side>
+      <a :href="'mailto:' + info.mailaddress">
+        <q-btn
+          flat
+          round
+          size="20px"
+          icon="mail"
+          style="color: #d6d6d6;"
+        />
+      </a>
+    </q-item-section>
+  </q-item>
 </template>
 
 <script>
@@ -86,13 +93,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.q-card {
-  max-width: 100%;
-  max-height: 100%;
-  margin-top: 1em;
-}
-
-.q-card div div span {
-  color: #d6d6d6;
+.q-item {
+  border-radius: 5px;
 }
 </style>

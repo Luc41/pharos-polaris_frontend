@@ -97,8 +97,7 @@
           <br>
           <a
             target="_blank"
-            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=23108402000110"
-            style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"
+            href="http://beian.miit.gov.cn/"
           >
             <p>黑ICP备20002127号</p>
           </a>
@@ -106,7 +105,6 @@
           <a
             target="_blank"
             href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=23108402000110"
-            style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"
           >
             <img
               src="./assets/record.png"
@@ -256,6 +254,7 @@ body {
 
 /*link style*/
 a {
+  display:inline-block;
   text-decoration: none;
   color: #3ea4f7;
   p {
