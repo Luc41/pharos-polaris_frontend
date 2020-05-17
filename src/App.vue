@@ -78,6 +78,15 @@
             href="https://quasar.dev/"
             target="_blank"
           >Quasar</a>
+          <br>
+          <a
+            rel="license"
+            href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
+          ><img
+            alt="知识共享许可协议"
+            style="border-width:0"
+            src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"
+          ></a>
         </q-toolbar-title>
 
         <q-toolbar-title
@@ -85,7 +94,15 @@
           style="color: #939393;"
         >
           &copy;2020 Pharos-Polaris.com All Rights Reserved.
-          <q-space />
+          <br>
+          <a
+            target="_blank"
+            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=23108402000110"
+            style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"
+          >
+            <p>黑ICP备20002127号</p>
+          </a>
+
           <a
             target="_blank"
             href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=23108402000110"
@@ -95,7 +112,7 @@
               src="./assets/record.png"
               style="float:left;height:16px;"
             >
-            <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">黑公网安备 23108402000110号</p>
+            <p>黑公网安备 23108402000110号</p>
           </a>
         </q-toolbar-title>
       </q-toolbar>
@@ -241,6 +258,13 @@ body {
 a {
   text-decoration: none;
   color: #3ea4f7;
+  p {
+    float:left;
+    height:20px;
+    line-height:20px;
+    margin: 0px 0px 0px 5px;
+    color:#939393;
+  }
 }
 
 /*transtion*/
