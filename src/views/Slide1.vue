@@ -41,7 +41,7 @@
             class="q-ma-xl"
             id="logo"
             alt="main logo"
-            src="../assets/logo-v3.png"
+            src="../assets/logo-v5.png"
           >
         </div>
       </transition>
@@ -95,19 +95,5 @@ export default {
 #logo {
   max-width: 300px;
   max-height: 300px;
-  /*set image mask*/
-  /*mask-image: url(../assets/logo-v2.png);
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: 100%, 100%;*/
 }
-
-/*set dom mask*/
-/*#title {
-  /*linear geadient mask*/ /*
-  background-image: linear-gradient(#c44a6e, #ffa33a);
-  background-size: cover;
-  background-clip: text;
-  color: transparent;
-}*/
 </style>

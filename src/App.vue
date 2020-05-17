@@ -3,17 +3,17 @@
     <!--particle background, ref:https://github.com/creotip/vue-particles -->
     <vue-particles
       class="particle"
-      color="#dedede"
-      :particle-opacity="0.7"
+      color="#ffffff"
+      :particle-opacity="0.08"
       :particles-number="150"
       shape-type="circle"
-      :particle-size="4"
+      :particle-size="60"
       lines-color="#dedede"
       :lines-width="1"
       :line-linked="true"
-      :line-opacity="0.4"
+      :line-opacity="0"
       :lines-distance="150"
-      :move-speed="1"
+      :move-speed="3"
       :hover-effect="false"
       hover-mode="grab"
       :click-effect="false"
@@ -64,8 +64,11 @@
       reveal
       v-show="this.$route.name !== '404'"
     >
-      <q-toolbar id="subtitle">
-        <q-toolbar-title class="text-caption text-left">
+      <q-toolbar>
+        <q-toolbar-title
+          class="text-caption text-left"
+          style="color: #939393;"
+        >
           Powered by
           <a
             href="https://cn.vuejs.org/"
@@ -75,11 +78,42 @@
             href="https://quasar.dev/"
             target="_blank"
           >Quasar</a>
+          <br>
+          <a
+            rel="license"
+            href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
+          ><img
+            alt="知识共享许可协议"
+            style="border-width:0"
+            src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"
+          ></a>
         </q-toolbar-title>
+
         <q-toolbar-title
           class="text-caption text-right"
+          style="color: #939393;"
         >
           &copy;2020 Pharos-Polaris.com All Rights Reserved.
+          <br>
+          <a
+            target="_blank"
+            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=23108402000110"
+            style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"
+          >
+            <p>黑ICP备20002127号</p>
+          </a>
+
+          <a
+            target="_blank"
+            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=23108402000110"
+            style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"
+          >
+            <img
+              src="./assets/record.png"
+              style="float:left;height:16px;"
+            >
+            <p>黑公网安备 23108402000110号</p>
+          </a>
         </q-toolbar-title>
       </q-toolbar>
     </q-footer>
@@ -102,7 +136,7 @@
         <q-fab
           class="no-shadow"
           v-model="fabMain"
-          color="orange-9"
+          color="blue-12"
           icon="keyboard_arrow_up"
           direction="up"
           vertical-actions-align="right"
@@ -112,7 +146,7 @@
           <q-fab-action
             class="no-shadow"
             label-position="left"
-            color="orange-9"
+            color="blue-12"
             icon="contact_support"
             label="CONTACT US"
             to="/contact"
@@ -121,7 +155,7 @@
           <q-fab-action
             class="no-shadow"
             label-position="left"
-            color="orange-9"
+            color="blue-12"
             icon="info"
             label="ABOUT"
             to="/about"
@@ -130,7 +164,7 @@
           <q-fab-action
             class="no-shadow"
             label-position="left"
-            color="orange-9"
+            color="blue-12"
             icon="web"
             label="SITES"
             to="/sites"
@@ -139,7 +173,7 @@
           <q-fab-action
             class="no-shadow"
             label-position="left"
-            color="orange-9"
+            color="blue-12"
             icon="home"
             label="HOME"
             to="/"
@@ -187,12 +221,7 @@ export default {
   font-weight: 400;
 }
 
-#subtitle {
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
-}
-
-span {
+#subtitle,footer,span {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
 }
@@ -214,37 +243,6 @@ body {
   background-color: #434343;
   background-image: linear-gradient(30deg, #434343, #000727);
 }
-/*
-#content {
-  background-color: transparent;
-  background-image: linear-gradient(
-      0deg,
-      transparent 24%,
-      rgba(255, 255, 255, 0.05) 25%,`
-      rgba(255, 255, 255, 0.05) 26%,
-      transparent 27%,
-      transparent 74%,
-      rgba(255, 255, 255, 0.05) 75%,
-      rgba(255, 255, 255, 0.05) 76%,
-      transparent 77%,
-      transparent
-    ),
-    linear-gradient(
-      90deg,
-      transparent 24%,
-      rgba(255, 255, 255, 0.05) 25%,
-      rgba(255, 255, 255, 0.05) 26%,
-      transparent 27%,
-      transparent 74%,
-      rgba(255, 255, 255, 0.05) 75%,
-      rgba(255, 255, 255, 0.05) 76%,
-      transparent 77%,
-      transparent
-    );
-  height: 100%;
-  background-size: 50px 50px;
-}
-*/
 
 /*particle position*/
 .particle {
@@ -252,12 +250,21 @@ body {
   width: 100%;
   position: absolute;
   z-index: -1;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
 }
 
 /*link style*/
 a {
   text-decoration: none;
-  color: #ef6c00;
+  color: #3ea4f7;
+  p {
+    float:left;
+    height:20px;
+    line-height:20px;
+    margin: 0px 0px 0px 5px;
+    color:#939393;
+  }
 }
 
 /*transtion*/

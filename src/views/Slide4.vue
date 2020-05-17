@@ -83,10 +83,16 @@
               <div class="row q-gutter-md">
                 <div class="col-1 col-auto" />
                 <div class="col-3 col-auto">
-                  <memcard :info="info_1" />
+                  <memcard
+                    :info="info_1"
+                    char="dev"
+                  />
                 </div>
                 <div class="col-3 col-auto">
-                  <memcard :info="info_2" />
+                  <memcard
+                    :info="info_2"
+                    char="dev"
+                  />
                 </div>
                 <div class="col-3 col-auto" />
                 <div class="col-1 col-auto" />
@@ -96,10 +102,16 @@
               <div class="row q-gutter-md">
                 <div class="col-1 col-auto" />
                 <div class="col-3 col-auto">
-                  <memcard :info="info_1" />
+                  <memcard
+                    :info="info_1"
+                    char="contri"
+                  />
                 </div>
                 <div class="col-3 col-auto">
-                  <memcard :info="info_2" />
+                  <memcard
+                    :info="info_2"
+                    char="contri"
+                  />
                 </div>
                 <div class="col-3 col-auto" />
                 <div class="col-1 col-auto" />
@@ -163,6 +175,8 @@ export default {
         mailaddress: '651151844@qq.com'
       }
     }
+  },
+  methods: {
   }
 }
 </script>
