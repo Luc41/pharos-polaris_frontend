@@ -203,9 +203,6 @@ export default {
       this.fabPos = [this.fabPos[0] - ev.delta.x, this.fabPos[1] - ev.delta.y]
     }
   }
-  // mounted() {
-  //  window.addEventListener("mousewheel", this.handleScroll, false);
-  // }
 }
 </script>
 
