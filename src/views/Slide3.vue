@@ -90,33 +90,35 @@
                   </q-tab-panels>
                 </template>
                 <template v-slot:after>
-                  <q-carousel
-                    animated
-                    v-model="slidePanel"
-                    navigation
-                    infinite
-                    :autoplay="10000"
-                    padding
-                    transition-next="slide-right"
-                    transition-prev="slide-left"
-                  >
-                    <q-carousel-slide
-                      :name="0"
-                      :img-src="imgSrc[0]"
-                    />
-                    <q-carousel-slide
-                      :name="1"
-                      :img-src="imgSrc[1]"
-                    />
-                    <q-carousel-slide
-                      :name="2"
-                      :img-src="imgSrc[2]"
-                    />
-                    <q-carousel-slide
-                      :name="3"
-                      :img-src="imgSrc[3]"
-                    />
-                  </q-carousel>
+                  <keep-alive>
+                    <q-carousel
+                      animated
+                      v-model="slidePanel"
+                      navigation
+                      infinite
+                      :autoplay="10000"
+                      padding
+                      transition-next="slide-right"
+                      transition-prev="slide-left"
+                    >
+                      <q-carousel-slide
+                        :name="0"
+                        :img-src="imgSrc[0]"
+                      />
+                      <q-carousel-slide
+                        :name="1"
+                        :img-src="imgSrc[1]"
+                      />
+                      <q-carousel-slide
+                        :name="2"
+                        :img-src="imgSrc[2]"
+                      />
+                      <q-carousel-slide
+                        :name="3"
+                        :img-src="imgSrc[3]"
+                      />
+                    </q-carousel>
+                  </keep-alive>
                 </template>
               </q-splitter>
             </div>

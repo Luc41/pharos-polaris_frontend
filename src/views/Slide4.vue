@@ -84,13 +84,13 @@
                 <div class="col-1 col-auto" />
                 <div class="col-3 col-auto">
                   <memcard
-                    :info="info_1"
+                    :info="info[0]"
                     char="dev"
                   />
                 </div>
                 <div class="col-3 col-auto">
                   <memcard
-                    :info="info_2"
+                    :info="info[1]"
                     char="dev"
                   />
                 </div>
@@ -103,13 +103,13 @@
                 <div class="col-1 col-auto" />
                 <div class="col-3 col-auto">
                   <memcard
-                    :info="info_1"
+                    :info="info[0]"
                     char="contri"
                   />
                 </div>
                 <div class="col-3 col-auto">
                   <memcard
-                    :info="info_2"
+                    :info="info[1]"
                     char="contri"
                   />
                 </div>
@@ -164,20 +164,21 @@ export default {
     return {
       tab: 'dev',
       dn_fabPos_4: [0, 30],
-      info_1: {
-        name: 'Luc-41',
-        date: 'March 16,2020',
-        mailaddress: 'whthunder@live.cn'
-      },
-      info_2: {
-        name: 'Mr.Chathedral',
-        date: 'March 16,2020',
-        mailaddress: '651151844@qq.com'
-      }
+      info: [
+        {
+          name: 'Luc-41',
+          date: 'March 16,2020',
+          mailaddress: 'whthunder@live.cn'
+        },
+        {
+          name: 'Mr.Chathedral',
+          date: 'March 16,2020',
+          mailaddress: '651151844@qq.com'
+        }
+      ]
     }
   },
-  methods: {
-  }
+  methods: {}
 }
 </script>
 
