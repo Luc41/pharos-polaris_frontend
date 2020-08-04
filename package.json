@@ -11,7 +11,7 @@
   "dependencies": {
     "@quasar/extras": "^1.8.2",
     "core-js": "^3.6.4",
-    "md5": "^2.2.1",
+    "md5": "^2.3.0",
     "quasar": "^1.12.12",
     "vue": "^2.6.11",
     "vue-router": "^3.3.4"
