@@ -1,5 +1,8 @@
 <template>
-  <q-page class="flex flex-center">
+  <q-page
+    class="flex flex-center"
+    padding
+  >
     <div class="q-pa-md column">
       <transition
         name="slide"
