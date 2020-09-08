@@ -1,5 +1,8 @@
 <template>
-  <q-page class="q-pa-md">
+  <q-page
+    class="q-pa-md"
+    padding
+  >
     <div
       class="q-pa-md column"
       style="margin-top: 5em;"
