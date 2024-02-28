@@ -1,35 +1,41 @@
-# Pharos-Polaris Frontend
+# pharos-polaris.com (pharos-polaris-frontend)
 
-使用
-[Vue.js](https://cn.vuejs.org/)
-和
-[Quasar](https://quasar.dev/)
-构建
+Homepage for pharos-polaris.com
 
-## Project setup
-
-``` bash
+## Install the dependencies
+```bash
+yarn
+# or
 npm install
 ```
 
-### Compiles and hot-reloads for development
-
-``` bash
-npm run serve
+### Start the app in development mode (hot-code reloading, error reporting, etc.)
+```bash
+quasar dev
 ```
 
-### Compiles and minifies for production
 
-``` bash
-npm run build
-```
-
-### Lints and fixes files
-
-``` bash
+### Lint the files
+```bash
+yarn lint
+# or
 npm run lint
 ```
 
-### Customize configuration
 
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Format the files
+```bash
+yarn format
+# or
+npm run format
+```
+
+
+
+### Build the app for production
+```bash
+quasar build
+```
+
+### Customize the configuration
+See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).

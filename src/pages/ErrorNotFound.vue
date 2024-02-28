@@ -65,14 +65,16 @@
 </template>
 
 <script>
-export default {
-  name: 'Page404',
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'ErrorNotFound',
   data () {
     return {
       imgSrc: 'https://s1.ax1x.com/2020/04/27/JRYZk9.png'
     }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

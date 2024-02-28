@@ -1,61 +1,34 @@
 <template>
-  <q-item
-    :style="'background-color: ' + cardColorbg + ';'"
-    clickable
-  >
-    <q-item-section
-      avatar
-      class="q-my-sm"
-    >
-      <q-avatar
-        color="primary"
-        text-color="white"
-        size="56px"
-      >
-        <img
-          :src="'https://s.gravatar.com/avatar/' + imageHash"
-          alt="avatar"
-        >
+  <q-item :style="'background-color: ' + cardColorbg + ';'" clickable>
+    <q-item-section avatar class="q-my-sm">
+      <q-avatar color="primary" text-color="white" size="56px">
+        <img :src="'https://s.gravatar.com/avatar/' + imageHash" alt="avatar">
       </q-avatar>
     </q-item-section>
 
     <q-item-section>
-      <q-item-label
-        id="title"
-        class="text-white text-h6"
-        lines="1"
-      >
+      <q-item-label id="title" class="text-white text-h6" lines="1">
         {{ info.name }}
       </q-item-label>
-      <q-item-label
-        id="subtitle"
-        class="text-white"
-        caption
-        lines="1"
-      >
+      <q-item-label id="subtitle" class="text-white" caption lines="1">
         Since {{ info.date }}
       </q-item-label>
     </q-item-section>
 
     <q-item-section side>
       <a :href="'mailto:' + info.mailaddress">
-        <q-btn
-          flat
-          round
-          size="20px"
-          icon="mail"
-          style="color: #d6d6d6;"
-        />
+        <q-btn flat round size="20px" icon="mail" style="color: #d6d6d6;" />
       </a>
     </q-item-section>
   </q-item>
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import md5 from 'md5'
 
-export default {
-  name: 'Memcard',
+export default defineComponent({
+  name: 'MemCard',
   props: {
     info: {
       type: Object,
@@ -70,7 +43,7 @@ export default {
       }
     }
   },
-  data () {
+  data() {
     return {
       imageHash: md5(this.info.mailaddress),
       cardColorbg: this.defColor(this.char)
@@ -89,7 +62,7 @@ export default {
       return colorBg
     }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>
