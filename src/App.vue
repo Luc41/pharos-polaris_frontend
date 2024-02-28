@@ -93,13 +93,13 @@
           class="text-caption text-right"
           style="color: #939393;"
         >
-          &copy;2020 Pharos-Polaris.com All Rights Reserved.
+          &copy;2024 Pharos-Polaris.com All Rights Reserved.
           <br>
           <a
             target="_blank"
             href="http://beian.miit.gov.cn/"
           >
-            <p>黑ICP备20002127号</p>
+            <p>黑ICP备20002127号-1</p>
           </a>
 
           <a
